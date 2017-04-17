@@ -1,0 +1,10 @@
+<% if !@picture.errors.empty? %>
+  <% @picture.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+<%= form_for @picture do |f| %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.submit %>
+<% end %>
