@@ -4,7 +4,12 @@
   <% end %>
 <% end %>
 <%= form_for @picture do |f| %>
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
+  <%= f.label :image_url, "Image URL:" %><br>
+  <%= f.text_field :image_url %><br>
+  <br>
   <%= f.submit %>
 <% end %>
+<br>
+
+<h5>Preview:</h5>
+<img src="<%= @picture.image_url %>">

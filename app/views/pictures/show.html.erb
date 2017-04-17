@@ -1,0 +1,8 @@
+<%= image_tag @picture.image_url %>
+
+<%= form_tag '/picture-categories' do %>
+  <%= hidden_field_tag :'picture_category[picture_id]', @picture.id %>
+  <%= label_tag :'picture_category[category_id]', "Categories:" %>
+  <%= select_tag(:'picture_category[category_id]', options_from_collection_for_select( Category.all, "id", "name" ), multiple: true ) %>
+  <%= submit_tag "Add Category" %>
+<% end %>

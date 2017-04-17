@@ -6,8 +6,7 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.new( image: params[:picture][:image] )
-    byebug
+    @picture = Picture.new( picture_params )
     @picture.user = User.first
     if @picture.save
       redirect_to picture_path( @picture )
@@ -27,6 +26,6 @@ class PicturesController < ApplicationController
   end
 
   def picture_params
-    params.require( :picture ).permit( :image )
+    params.require( :picture ).permit( :image_url )
   end
 end
