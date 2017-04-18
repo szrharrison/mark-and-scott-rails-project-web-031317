@@ -1,9 +1,9 @@
 <h1><%= @category.name %></h1>
 
-<ul>
+<ul class="category-display">
   <% @category.pictures.each do |picture| %>
-    <li>
-      <%= link_to "<img src='#{picture.image_url}'>".html_safe, picture %>
+    <li class="pictures-display">
+      <%= link_to "<p>#{picture.name}</p><img src='#{picture.image_url}'>".html_safe, picture %>
     </li>
   <% end %>
 </ul>

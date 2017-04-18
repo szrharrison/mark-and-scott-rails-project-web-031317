@@ -14,11 +14,34 @@
  *= require_self
  */
 
-/*body {
-  background-color: #ff6b6b;
-}*/
-nav ul {
+body {
+padding-top: 50px;
+}
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #556270;
+}
+nav, nav ul, nav a {
+  margin: 0;
   list-style: none;
+  color: #c7f464;
+  text-decoration: none;
+}
+nav li {display: inline-block;}
+nav a {
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 140px;
+  text-align: center;
+  border-left: 1px solid #5788bc;
+}
+nav a:hover {
+  background-color: #3e6288;
 }
 .btn {
   transition: .2s linear;
@@ -33,4 +56,13 @@ nav ul {
 .btn:hover {
   background-color: #4ecdc4;
   color: #c44d58;
+}
+.pictures-display {
+  float: left;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.category-display {
+  list-style: none;
 }

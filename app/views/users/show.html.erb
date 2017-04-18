@@ -1,8 +1,12 @@
 <h1>Hello, <%= @user.username %>!</h1>
 
 <h3>Your Pictures:</h3>
+
 <% @user.pictures.each do |picture| %>
-  <%= link_to "<img src='#{picture.image_url}'>".html_safe, picture %>
+  <div class="pictures-display">
+    <h5><%= picture.name %></h5>
+    <%= link_to "<img src='#{picture.image_url}'>".html_safe, picture %>
+  </div>
 <% end %>
 
-<%= link_to "Or add a picture", new_picture_path, class: "btn" %>
+<%= link_to "Add a picture", new_picture_path, class: "btn" %>

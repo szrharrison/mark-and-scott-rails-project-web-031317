@@ -26,6 +26,14 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
 
+  def update
+    if @picture.update( picture_params )
+      redirect_to picture_path( @picture )
+    else
+      render :edit
+    end
+  end
+
   private
 
   def set_picture
