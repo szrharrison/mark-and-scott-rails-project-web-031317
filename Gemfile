@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'carrierwave-postgresql', '~> 0.1.2'
+gem "paperclip", "~> 5.0.0"
 gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

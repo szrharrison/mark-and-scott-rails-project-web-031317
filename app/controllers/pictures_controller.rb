@@ -8,12 +8,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new( picture_params )
-    categories = params.require( :categories )
-    categories = categories.split(",")
-    categories.map! do |category|
-      Category.find_or_create_by( name: category.strip )
-    end
-    @picture.categories = categories
+    @picture.category_list = params.require( :categories )
     @picture.user = current_user
     if @picture.save
       redirect_to picture_path( @picture )
@@ -41,6 +36,6 @@ class PicturesController < ApplicationController
   end
 
   def picture_params
-    params.require( :picture ).permit( :image_url, :name )
+    params.require( :picture ).permit( :image, :name )
   end
 end

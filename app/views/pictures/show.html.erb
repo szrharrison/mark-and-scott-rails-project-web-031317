@@ -1,5 +1,5 @@
 <h3><%= @picture.name %></h3>
-<%= image_tag @picture.image_url %>
+<%= image_tag @picture.image.url %>
 <p><%= link_to "Edit image", edit_picture_path( @picture ), class: "btn" %></p>
 <br>
 <h5>Categories</h5>

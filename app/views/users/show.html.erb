@@ -5,7 +5,7 @@
 <% @user.pictures.each do |picture| %>
   <div class="pictures-display">
     <h5><%= picture.name %></h5>
-    <%= link_to "<img src='#{picture.image_url}'>".html_safe, picture %>
+    <%= link_to "<img src='#{picture.image.url}'>".html_safe, picture %>
   </div>
 <% end %>
 

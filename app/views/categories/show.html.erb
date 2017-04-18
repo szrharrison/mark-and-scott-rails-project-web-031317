@@ -3,7 +3,7 @@
 <ul class="category-display">
   <% @category.pictures.each do |picture| %>
     <li class="pictures-display">
-      <%= link_to "<p>#{picture.name}</p><img src='#{picture.image_url}'>".html_safe, picture %>
+      <%= link_to "<p>#{picture.name}</p><img src='#{picture.image.url}'>".html_safe, picture %>
     </li>
   <% end %>
 </ul>

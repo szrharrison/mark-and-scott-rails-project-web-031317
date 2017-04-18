@@ -4,14 +4,18 @@
   <% end %>
 <% end %>
 <%= form_for @picture do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :image_url, "Image URL:" %><br>
-  <%= f.text_field :image_url %><br>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <br>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %><br>
+  <br>
+  <%= label_tag :categories, "Add your tags, separated by commas" %><br>
+  <%= text_area_tag :categories %><br>
   <br>
   <%= f.submit class: "btn" %>
 <% end %>
 <br>
 
 <h5>Preview:</h5>
-<img src="<%= @picture.image_url %>">
+<%= image_tag @picture.image.url %>
