@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: :login
   post '/sessions', to: 'sessions#create', as: :create_session
   delete '/sessions/:id', to: 'sessions#destroy', as: :destroy_session
+
+  post '/user-leaders/:leader_id', to: 'user_leaders#create', as: :create_user_leader
 end

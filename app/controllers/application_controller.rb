@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?, :authorize_user, :restrict_to_users
+  helper_method :current_user, :logged_in?, :authorize_user, :restrict_to_users, :user_authorized?
 
   private
   def logged_in?
@@ -13,9 +13,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def user_authorized?
+    session[:user_id] == @picture.user_id
+  end
+
   def authorize_user
     unless params[:id].to_i == session[:user_id]
-      redirect_to pictures_path
+      redirect_to root_path
     end
   end
 

@@ -1,5 +1,11 @@
 <h1>Hello, <%= @user.username %>!</h1>
 
+<h3>You are following:</h3>
+
+<% @user.leaders.each do |leader| %>
+  <%= leader.username %>
+<% end %>
+
 <h3>Your Pictures:</h3>
 
 <% @user.pictures.each do |picture| %>

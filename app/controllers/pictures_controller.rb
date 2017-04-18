@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update]
-  before_action :restrict_to_users, except: :index
+  before_action :restrict_to_users, except: [:index, :show]
 
   def new
     @picture = Picture.new
