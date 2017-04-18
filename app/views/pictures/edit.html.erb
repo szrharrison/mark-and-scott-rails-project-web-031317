@@ -4,6 +4,8 @@
   <% end %>
 <% end %>
 <%= form_for @picture do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
   <%= f.label :image_url, "Image URL:" %><br>
   <%= f.text_field :image_url %><br>
   <br>

@@ -11,10 +11,12 @@
   <body>
     <nav>
       <ul>
-        <%= link_to 'Home', root_path %>
+        <li>
+          <%= link_to 'Home', root_path %>
+        </li>
         <% if logged_in? %>
           <li>
-            <%= link_to "Hi, #{current_user.username}", current_user %>
+            <%= link_to "View your pics", current_user %>
           </li>
           <li>
             <%= link_to "Logout", "/sessions/#{current_user.id}", method: 'delete' %>
