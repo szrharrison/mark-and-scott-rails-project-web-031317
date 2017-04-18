@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update]
+  before_action :restrict_to_users, except: :index
 
   def new
     @picture = Picture.new
@@ -7,7 +8,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new( picture_params )
-    @picture.user = User.first
+    @picture.user = current_user
     if @picture.save
       redirect_to picture_path( @picture )
     else

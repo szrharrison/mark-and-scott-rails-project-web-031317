@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update]
+  before_action :restrict_to_users, except: [:index, :show]
 
   def new
     @category = Category.new

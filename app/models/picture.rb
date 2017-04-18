@@ -6,4 +6,8 @@ class Picture < ApplicationRecord
 
   validates :user_id, presence: true
   validates :image_url, presence: true
+
+  def non_category
+    Category.all - categories
+  end
 end

@@ -1,13 +1,22 @@
 class PictureCategoriesController < ApplicationController
-
+  before_action :restrict_to_users
+  
   def create
     @picture_category = PictureCategory.new( picture_category_params )
+    @picture = Picture.find( params.require( :picture_category ).require( :picture_id ) )
     if @picture_category.save
-      redirect_to picture_category_path( @picture_category )
+      redirect_to picture_path( @picture )
     else
-      @picture = Picture.find( params.require( :picture_category ).require( :picture_id ) )
       render 'pictures/show'
     end
+  end
+
+  def destroy
+    @picture_category = PictureCategory.find( params[:id] )
+    @picture_category.destroy
+    @category = Category.find( params.require( :category_id ) )
+    @picture = Picture.find( params.require( :picture_id ) )
+    redirect_to picture_path( @picture )
   end
 
   private
