@@ -1,3 +1,6 @@
+require 'RMagick'
+include Magick
+
 class Picture < ApplicationRecord
   has_attached_file :image, default_url: "/images/missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
@@ -18,5 +21,11 @@ class Picture < ApplicationRecord
       Category.find_or_create_by( name: category.strip )
     end
     self.categories = categories_array
+  end
+
+  def greyscale
+    path = self.image.path
+    image = ImageList.new(path)
+    image.display
   end
 end
