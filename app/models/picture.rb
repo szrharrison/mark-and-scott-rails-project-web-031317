@@ -90,7 +90,6 @@ class Picture < ApplicationRecord
       values[:green] += pixel.green
       values[:blue] += pixel.blue
       values[:red] += pixel.red
-
     end
     total_count = values[:red] + values[:blue] + values[:green]
     answer = {
