@@ -671,3 +671,698 @@ Completed 200 OK in 39ms (Views: 33.0ms | ActiveRecord: 1.3ms)
   [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-04-19 16:46:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  Rendered pictures/index.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 235ms (Views: 203.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:46:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (41.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/pictures/new" for ::1 at 2017-04-19 16:46:48 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (18.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-19 16:46:58 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mbRL082QZDPFiJJCX2Rjjt6WJYWnjd9GdbhALRzfobovvsYTPsFaKglnaMT3VH72JUD7csTmNLV3qhUdZtvMQg==", "picture"=>{"name"=>"Red", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd4f1b06760 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-43375-15d5qtv.png>, @original_filename="2000px-Red_flag.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"2000px-Red_flag.svg.png\"\r\nContent-Type: image/png\r\n">}, "categories"=>"", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/6885bd3a0c3ea3271170932009c327b420170419-43375-zovcty.png'
+Completed 400 Bad Request in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: categories):
+  
+app/controllers/pictures_controller.rb:11:in `create'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.0ms)
+Started POST "/pictures" for ::1 at 2017-04-19 16:47:04 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I8gWRYj5dAooFCW5mYjlFhSqwJYnJb9oLxIX3sEcIiTDct9Ib7yu6sazyGQIeWHqCt4k8TFrDK1+mGwv8rO3jw==", "picture"=>{"name"=>"Red", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd4f3dc50d0 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-43375-1wv3zav.png>, @original_filename="2000px-Red_flag.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"2000px-Red_flag.svg.png\"\r\nContent-Type: image/png\r\n">}, "categories"=>"red", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/6885bd3a0c3ea3271170932009c327b420170419-43375-10ghmin.png'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "red"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "red"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/6885bd3a0c3ea3271170932009c327b420170419-43375-j925n8.png'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "Red"], ["image_file_name", "2000px-Red_flag.svg.png"], ["image_content_type", "image/png"], ["image_file_size", 12075], ["image_updated_at", 2017-04-19 20:47:04 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 2], ["category_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/2
+Completed 302 Found in 85ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 16:47:04 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 2]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 2], ["category_id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (12.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 35.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:47:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/pictures/1" for ::1 at 2017-04-19 16:49:37 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  Rendered pictures/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/views/pictures/show.html.erb:4: syntax error, unexpected '<', expecting ')'
+<% if session[:user_id] != @pi...
+ ^
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/views/pictures/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+<% if session[:user_id] != @picture.user.i...
+             ^
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/views/pictures/show.html.erb:38: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/pictures/show.html.erb:4: syntax error, unexpected '<', expecting ')'
+app/views/pictures/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pictures/show.html.erb:38: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.7ms)
+Started GET "/pictures/1" for ::1 at 2017-04-19 16:49:47 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (72.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 88.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures/1" for ::1 at 2017-04-19 16:49:56 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (68.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 81.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:50:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 16:50:03 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+Started GET "/pictures/2" for ::1 at 2017-04-19 16:51:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 2]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 2], ["category_id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (2187.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2462ms (Views: 2412.0ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:51:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (19.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 30.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/pictures/1" for ::1 at 2017-04-19 16:51:26 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (76.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 92.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:51:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 43.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pictures/new" for ::1 at 2017-04-19 16:51:34 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-19 16:51:51 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QDEUsU1pnVxBj+8OiswuJP9wdQou5A8HkI/tmWkC0nz2O5lxvjijRY1gFYgi/DNcBKar/U2P5PSSnbipEwa/hA==", "picture"=>{"name"=>"Green", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd383ac5f68 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-43434-fvi28o.gif>, @original_filename="green.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n">}, "categories"=>"tag", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-43434-1czngiq.gif'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "tag"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "tag"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-43434-172vbin.gif'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "Green"], ["image_file_name", "green.gif"], ["image_content_type", "image/gif"], ["image_file_size", 510], ["image_updated_at", 2017-04-19 20:51:51 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 3], ["category_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/3
+Completed 302 Found in 62ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/pictures/3" for ::1 at 2017-04-19 16:51:51 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (78.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 95.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:52:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pictures/new" for ::1 at 2017-04-19 16:53:37 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-19 16:53:46 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VZ/raxkrR1egAWQN0dmceR37vLLnCFo+ldmXe0xx1wHjlWar6np5Tmzunot56YEB5i1iRYRjsc2Xy8JLNnW6+Q==", "picture"=>{"name"=>"Blue", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd38502aef8 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-43434-f745u3.png>, @original_filename="225px-Solid_blue.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"225px-Solid_blue.svg.png\"\r\nContent-Type: image/png\r\n">}, "categories"=>"not blue", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170419-43434-10rwcck.png'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "not blue"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "not blue"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170419-43434-xatl5.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "Blue"], ["image_file_name", "225px-Solid_blue.svg.png"], ["image_content_type", "image/png"], ["image_file_size", 695], ["image_updated_at", 2017-04-19 20:53:46 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 4], ["category_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/4
+Completed 302 Found in 46ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/pictures/4" for ::1 at 2017-04-19 16:53:46 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 4]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 4], ["category_id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (41.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 16:53:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 16:53:51 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+Started GET "/pictures/2" for ::1 at 2017-04-19 16:54:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 2]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 2], ["category_id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (2130.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2397ms (Views: 2350.7ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 16:54:18 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.9ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+Started GET "/pictures/1" for ::1 at 2017-04-19 16:56:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.3ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (132.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 381ms (Views: 335.0ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/pictures/1" for ::1 at 2017-04-19 17:01:51 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/models/picture.rb:94: syntax error, unexpected tSYMBEG, expecting '}'
+      :green_percentage => values[:green]/total_count
+       ^
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/models/picture.rb:95: syntax error, unexpected =>, expecting keyword_end
+      :blue_percentage => values[:blue]/total_count
+                         ^
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/models/picture.rb:96: syntax error, unexpected '}', expecting keyword_end
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/models/picture.rb:124: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/picture.rb:94: syntax error, unexpected tSYMBEG, expecting '}'
+app/models/picture.rb:95: syntax error, unexpected =>, expecting keyword_end
+app/models/picture.rb:96: syntax error, unexpected '}', expecting keyword_end
+app/models/picture.rb:124: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/pictures_controller.rb:35:in `set_picture'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.3ms)
+Started GET "/pictures/1" for ::1 at 2017-04-19 17:02:17 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.3ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (89.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 104.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:02:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (25.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 42.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 17:02:45 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:04:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (126.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 378ms (Views: 329.7ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:07:54 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (84.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 97.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:08:50 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.3ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (86.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 101.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:37:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (25.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 37.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 17:37:32 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:37:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (129.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 377ms (Views: 330.8ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:37:56 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (1.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.3ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (69.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 84.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:37:58 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (63.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 77.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:37:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 34.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/pictures/4" for ::1 at 2017-04-19 17:38:01 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 4]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 4], ["category_id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (39.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures/4" for ::1 at 2017-04-19 17:38:05 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 4]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 4], ["category_id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (35.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:38:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures/3" for ::1 at 2017-04-19 17:38:08 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 3]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 3], ["category_id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (154.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 197ms (Views: 190.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:38:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (21.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 66.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/pictures/1" for ::1 at 2017-04-19 17:38:14 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (105.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 126ms (Views: 119.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:38:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/pictures/2" for ::1 at 2017-04-19 17:38:35 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+Started GET "/pictures/1" for ::1 at 2017-04-19 17:40:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 1]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 1], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (111.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 359ms (Views: 311.9ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-19 17:40:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (17.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 30.1ms | ActiveRecord: 5.0ms)
+
+

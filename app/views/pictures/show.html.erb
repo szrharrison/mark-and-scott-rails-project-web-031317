@@ -1,5 +1,6 @@
 <h3><%= @picture.name %></h3>
 <%= image_tag @picture.image.url %>
+<%= "your image is mostly #{@picture.color_percentages}!" %>
 <% if session[:user_id] != @picture.user.id && logged_in? %>
   <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn", method: "post" %>
 <% end %>
