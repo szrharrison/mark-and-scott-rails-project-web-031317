@@ -9,37 +9,39 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
           <%= link_to 'Pixr', root_path, id:"logo" %>
-        </li>
-        <% if logged_in? %>
-          <li>
-            <%= link_to "View your pics", current_user %>
-          </li>
-          <li>
-            <%= link_to "Logout", "/sessions/#{current_user.id}", method: 'delete' %>
-          </li>
-        <% else %>
-          <li>
-            <% if !!@user && !@user.errors.empty? %>
-              <% @user.errors.full_messages.each do |message| %>
-                <p class="error"><%= message %></p>
-              <% end %>
-            <% end %>
+          <ul class="right">
+            <% if logged_in? %>
+            <li>
+              <%= link_to "View your pics", current_user %>
+            </li>
+            <li>
+              <%= link_to "Logout", "/sessions/#{current_user.id}", method: 'delete' %>
+            </li>
+            <% else %>
+          </ul>
+          <div class="nav-content">
             <%= form_tag '/sessions' do %>
-              <%= label_tag :username, "Username:" %>
-              <%= text_field_tag :username %><br>
-              <%= label_tag :password, "Password:" %>
-              <%= password_field_tag :password %>
-              <br>
-              <%= submit_tag "Login", class: "btn" %>
+              <div class="input-field">
+                <%= label_tag :username, "Username:" %>
+                <%= text_field_tag :username %>
+              </div>
+              <div class="input-field">
+                <%= label_tag :password, "Password:" %>
+                <%= password_field_tag :password %>
+              </div>
+              <div class="input-field">
+                <%= submit_tag "Login", class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" %>
+              </div>
             <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </nav>
+          </div>
+          <% end %>
+        </div>
+      </nav>
+    </div>
     <%= yield %>
   </body>
 </html>
