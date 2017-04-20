@@ -55,6 +55,22 @@
     </li>
   <% end %>
 </ul>
+
+<h5>Tags</h5>
+<ul>
+  <% @picture.tags.each do |tag| %>
+    <li>
+      <%= link_to tag.name, tag_path %>
+      <% if logged_in? && user_authorized? %>
+        <%= form_tag "/picture-tags/#{PictureTag.find_by( picture_id: @picture.id, tag_id: tag.id).id}", method: "delete" do %>
+          <%= hidden_field_tag :picture_id, @picture.id %>
+          <%= hidden_field_tag :tag_id, tag.id %>
+          <%= submit_tag "X" %>
+        <% end %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
 <% if logged_in? && user_authorized? %>
   <p><%= link_to "Edit image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %></p>
   <% if !!@picture_category && !@picture_category.errors.empty? %>

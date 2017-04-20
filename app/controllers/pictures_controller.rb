@@ -9,8 +9,11 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new( picture_params )
+
     @picture.user = current_user
     if @picture.save
+      #TODO make #categorize
+      @picture.tagorize
       redirect_to picture_path( @picture )
     else
       redirect_to :new, notice: @picture.errors.full_messages
@@ -23,6 +26,7 @@ class PicturesController < ApplicationController
 
   def update
     if @picture.update( picture_params )
+      @picture.tagorize
       redirect_to picture_path( @picture )
     else
       redirect_to :edit, notice: @picture.errors.full_messages
