@@ -221,7 +221,6 @@ class Picture < ApplicationRecord
     results = detector.run
     #results
     face = results.first
-    binding.pry
     face
   end
 
