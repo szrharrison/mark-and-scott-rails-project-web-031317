@@ -7,12 +7,20 @@
 <% end %>
 
 <h3>Your Pictures:</h3>
-
-<% @user.pictures.each do |picture| %>
-  <div class="pictures-display">
-    <h5><%= picture.name %></h5>
-    <%= link_to "<img src='#{picture.image.url}'>".html_safe, picture %>
-  </div>
-<% end %>
+<div class="row">
+  <% @user.pictures.each do |picture| %>
+    <div class="col s6 m4">
+      <div class="card hoverable">
+        <div class="card-image">
+          <%= link_to "<img src='#{picture.image.url}'><span class='card-title'>#{picture.name}</span>".html_safe, picture %>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite</i></a>
+        </div>
+        <div class="card-content">
+          <p>this is default content</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to "Add a picture", new_picture_path, class: "btn waves-effect waves-light" %>

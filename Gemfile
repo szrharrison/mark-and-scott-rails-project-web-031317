@@ -11,6 +11,7 @@ gem 'material_icons'
 gem 'pry'
 gem 'rmagick'
 gem 'rest_client'
+gem 'jquery-masonry-rails'
 
 gem 'face_detect'
 gem 'googleauth'

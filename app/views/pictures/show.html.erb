@@ -62,33 +62,12 @@
     <li>
       <%= link_to tag.name, tag_path %>
       <% if logged_in? && user_authorized? %>
-        <%= form_tag "/picture-tags/#{PictureTag.find_by( picture_id: @picture.id, tag_id: tag.id).id}", method: "delete" do %>
-          <%= hidden_field_tag :picture_id, @picture.id %>
-          <%= hidden_field_tag :tag_id, tag.id %>
-          <%= submit_tag "X" %>
-        <% end %>
+        <%= link_to "X".html_safe, "/picture-tags/#{PictureTag.find_by( picture_id: @picture.id, tag_id: tag.id).id}", class: "btn waves-effect waves-light", method: "delete" %>
       <% end %>
     </li>
   <% end %>
 </ul>
 <% if logged_in? && user_authorized? %>
-  <p><%= link_to "Edit image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %></p>
-  <% if !!@picture_category && !@picture_category.errors.empty? %>
-    <% @picture_category.errors.full_messages.each do |message| %>
-      <%= message %>
-    <% end %>
-  <% end %>
-
-  <%= form_tag '/picture-categories' do %>
-    <%= hidden_field_tag :'picture_category[picture_id]', @picture.id %>
-    <div class="row">
-      <div class="col s5">
-        <div class="input-field">
-          <%= label_tag :'picture_category[category_ids][]', "Categories:" %>
-          <%= select_tag(:'picture_category[category_ids][]', options_from_collection_for_select( @picture.non_category, "id", "name" ), multiple: true, include_blank: true ) %>
-        </div>
-      </div>
-    </div>
-    <%= submit_tag "Add Category", class: "btn" %>
-  <% end %>
+  <p><%= link_to "Edit Image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %>
+  <%= link_to "Delete Image", "/pictures/#{@picture.id}", class: "btn waves-effect waves-light", method: "delete" %></p>
 <% end %>

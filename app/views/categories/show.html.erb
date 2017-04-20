@@ -1,9 +1,17 @@
 <h1><%= @category.name %></h1>
 
-<ul class="category-display">
+<div class="row">
   <% @category.pictures.each do |picture| %>
-    <li class="pictures-display">
-      <%= link_to "<p>#{picture.name}</p><img src='#{picture.image.url}'>".html_safe, picture %>
-    </li>
+    <div class="col s6 m4">
+      <div class="card hoverable">
+        <div class="card-image">
+          <%= link_to "<img src='#{picture.image.url}'><span class='card-title'>#{picture.name}</span>".html_safe, picture %>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite</i></a>
+        </div>
+        <div class="card-content">
+          <p>this is default content</p>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>

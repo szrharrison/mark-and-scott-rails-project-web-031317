@@ -58,19 +58,6 @@ form {
 .btn:hover {
   color: $highlight-text-color;
 }
-.pictures-display {
-  float: left;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #000;
-}
-.category-display {
-  list-style: none;
-}
-img {
-  max-width: 80vw;
-  max-height: 80vh;
-}
 .hidden {
   display: none;
 }
