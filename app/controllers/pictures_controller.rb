@@ -24,6 +24,13 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
 
+  def edit
+    @picture_categories = @picture.categories.map do |category|
+      category.name
+    end
+    @picture_categories = @picture_categories.join(", ")
+  end
+
   def update
     if @picture.update( picture_params )
       redirect_to picture_path( @picture )

@@ -1,0 +1,76 @@
+@import "materialize";
+@import "material_icons_unicode";
+@import url('https://fonts.googleapis.com/css?family=Sarina');
+
+$logo-font: 'Sarina', cursive;
+$highlight-text-color: #c7f464;
+$background-color: #556270;
+@mixin flex-display {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+@mixin transition( $time ) {
+  transition: $time linear;
+}
+
+#logo {
+  font-family: $logo-font;
+  font-size: 24px;
+  margin-left: 20px;
+  @include transition( 0.3s );
+}
+nav {
+  @include transition( 0.3s );
+  background-color: $background-color;
+  a {
+    @include transition( 0.3s );
+    text-align: center;
+  }
+  a:hover {
+    color: $highlight-text-color;
+  }
+  ul {
+    li {
+      border-left: 1px solid #5788bc;
+    }
+  }
+}
+form {
+  .row {
+    margin-bottom: 0;
+  }
+  .input-field {
+    label:not(.label-icon).active {
+      -webkit-transform: translateY(-80%);
+      transform: translateY(-80%);
+      color: $highlight-text-color;
+      margin-right: 10px;
+    }
+    .prefix.active { color: $highlight-text-color;}
+  }
+  button {
+    margin-left: 10px
+  }
+}
+.btn:hover {
+  color: $highlight-text-color;
+}
+.pictures-display {
+  float: left;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.category-display {
+  list-style: none;
+}
+img {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+.hidden {
+  display: none;
+}
