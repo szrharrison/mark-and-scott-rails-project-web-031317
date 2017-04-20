@@ -103,14 +103,11 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-<<<<<<< HEAD
-    memoist (0.15.0)
-=======
     material_icons (2.2.1)
       railties (>= 3.2)
     materialize-sass (0.98.2)
       sass (~> 3.3)
->>>>>>> c12238a78b6d801de85f94541ab47a246f473dc5
+    memoist (0.15.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
