@@ -1403,3 +1403,672 @@ Processing by PicturesController#edit as HTML
 Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.8ms)
 
 
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images/000/000/001/original/wizard.jpg
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images/000/000/002/original/2000px-Red_flag.svg.png
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images/000/000/003/original/green.gif
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images/000/000/004/original/225px-Solid_blue.svg.png
+Started GET "/users/2" for ::1 at 2017-04-19 21:24:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (47.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 278ms (Views: 241.0ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/pictures/new" for ::1 at 2017-04-19 21:24:07 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (26.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 41.7ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-19 21:24:28 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P3joxQLJrp+VZvxn672IUzJ/rYV0HUzhGaFa0KWIvyKJcmUF8ZiQhlmJBuFDjZUryalzchd2pxIbsw/g34zS2g==", "picture"=>{"name"=>"Blue", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ec1cee700 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-46059-mbegqw.png>, @original_filename="225px-Solid_blue.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"225px-Solid_blue.svg.png\"\r\nContent-Type: image/png\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170419-46059-13c753.png'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 8.8ms)
+
+
+  
+Magick::ImageMagickError (unable to open image `/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images//original/225px-Solid_blue.svg.png': No such file or directory @ error/blob.c/OpenBlob/2701):
+  
+app/models/picture.rb:99:in `new'
+app/models/picture.rb:99:in `color_percentages'
+app/models/picture.rb:73:in `red?'
+app/controllers/pictures_controller.rb:12:in `create'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.0ms)
+Started POST "/pictures" for ::1 at 2017-04-19 21:25:03 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PBlCGmxew6VnmPXyl5aug2m1X6HsfY6N86RbB+ts/XLco4sXixsZRYk/GC8GZyp/d8G7xvozPUiiLiD22MNo2Q==", "picture"=>{"name"=>"Test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ebe5991d8 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-46059-1qlptn3.gif>, @original_filename="green.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-1euowla.gif'
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.2ms)
+
+
+  
+Magick::ImageMagickError (unable to open image `/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images//original/green.gif': No such file or directory @ error/blob.c/OpenBlob/2701):
+  
+app/models/picture.rb:99:in `new'
+app/models/picture.rb:99:in `color_percentages'
+app/models/picture.rb:73:in `red?'
+app/controllers/pictures_controller.rb:12:in `create'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.4ms)
+Started POST "/pictures" for ::1 at 2017-04-19 21:28:02 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"------WebKitFormBoundaryubYJ6EWcSw4njz8I\r\nContent-Disposition: form-data; name"=>"\"utf8\"\r\n\r\n✓\r\n------WebKitFormBoundaryubYJ6EWcSw4njz8I\r\nContent-Disposition: form-data; name=\"authenticity_token\"\r\n\r\nPBlCGmxew6VnmPXyl5aug2m1X6HsfY6N86RbB ts/XLco4sXixsZRYk/GC8GZyp/d8G7xvozPUiiLiD22MNo2Q==\r\n------WebKitFormBoundaryubYJ6EWcSw4njz8I\r\nContent-Disposition: form-data; name=\"picture[name]\"\r\n\r\nTest\r\n------WebKitFormBoundaryubYJ6EWcSw4njz8I\r\nContent-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n\r\nGIF89a[\u0001:\u0001\x80\u0000\u0000P\xB9H\u0000\u0000\u0000!\xF9\u0004\u0000\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000[\u0001:\u0001\u0000\u0002\xFF\x84\x8F\xA9\xCB\xED\u000F\xA3\x9C\xB4ڋ\xB3\u07BC\xFB\u000F\x86\xE2H\x96扦\xEAʶ\xEE\v\xC7\xF2L\xD7\xF6\x8D\xE7\xFA\xCE\xF7\xFE\u000F\f\n\x87Ģ\xF1\x88L*\x97̦\xF3\t\x8DJ\xA7Ԫ\xF5\x8A\xCDj\xB7ܮ\xF7\v\u000E\x8B\xC7\xE4\xB2\xF9\x8CN\xAB\xD7\xEC\xB6\xFB\r\x8F\xCB\xE7\xF4\xBA\xFD\x8E\xCF\xEB\xF7\xFC\xBE\xFF\u000F\u0018(8HXhx\x88\x98\xA8\xB8\xC8\xD8\xE8\xF8\b\u0019)9IYiy\x89\x99\xA9\xB9\xC9\xD9\xE9\xF9\t\u001A*:JZjz\x8A\x9A\xAA\xBA\xCA\xDA\xEA\xFA\n\e ;K[k{\x8B\x9B\xAB\xBB\xCB\xDB\xEB\xFB\v\u001C,<L\\l|\x8C\x9C\xAC\xBC\xCC\xDC\xEC\xFC\f\u001D-=M]m}\x8D\x9D\xAD\xBD\xCD\xDD\xED\xFD\r\u001E.>N^n~\x8E\x9E\xAE\xBE\xCE\xDE\xEE\xFE\u000E\u001F/?O_o\u007F\x8F\x9F\xAF\xBF\xCF\xDF\xEF\xFF\u000F0\xA0\xC0\x81\u0004\v\u001A<\x880\xA1\f\e:|\b1\xA2ĉ\u0014 Z\xBC\x881\xA3ƍ\xD5\u001C;z\xFC\b2\xA4ȑ$K\x9A<\x892\xA5ʕ,[\xBA|\t3\xA6̙4kڼ\x893\xA7Ν<{\xFA\xFC\t4\xA8СD\x8B\u001A=\x8A4\xA9ҥL\x9B:}\n5\xAAԩT\xABZ\xBD\x8A5\xAB֭\\\xBBz\xFD\n6\xACرd˚=\x8B6\xADڵlۺ}\v7\xAEܹt\xEBڽ\x8B7\xAF\u07BD|\xFB\xFA\xFD\v8\xB0\xE0\xC1\x84\v\e>\x8C8\xB1\xE2Ō\e;~\f9\xB2\xE4ɔ [\xBE\x8C9\xB3\xE6͜;{\xFE\f:\xB4\xE8ѤK\x9B>\x8D:\xB5\xEAլ[\xBB~\r;\xB6\xECٴk۾\x8D;\xB7\xEEݼ{\xFB\xFE\r<\xB8\xF0\xE1ċ\e?\x8E<\xB9\xF2\xE5̛;\u007F\u000E=\xBA\xF4\xE9ԫ[\xBFT\u0000\u0000;\r\n------WebKitFormBoundaryubYJ6EWcSw4njz8I\r\nContent-Disposition: form-data; name=\"categories\"\r\n\r\ntest\r\n------WebKitFormBoundaryubYJ6EWcSw4njz8I\r\nContent-Disposition: form-data; name=\"commit\"\r\n\r\nCreate Picture\r\n------WebKitFormBoundaryubYJ6EWcSw4njz8I--\r\n"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:223:in `handle_unverified_request'
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:218:in `verify_authenticity_token'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.0ms)
+Started GET "/pictures/new" for ::1 at 2017-04-19 21:28:11 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 28.5ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-19 21:28:19 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KakMikBXGp03gfjKcu6N3FdhSEkyBcZ281Mwr6RJISLJE8WHpxLAfdkmFRfjHwkgSRWsLiRLdbOi2Utel+a0iQ==", "picture"=>{"name"=>"Test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ec619cf28 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-46059-y8wyi6.gif>, @original_filename="green.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-1xirqqw.gif'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-1u8ukzk.gif'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "Test"], ["image_file_name", "green.gif"], ["image_content_type", "image/gif"], ["image_file_size", 510], ["image_updated_at", 2017-04-20 01:28:19 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 5], ["category_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/5
+Completed 302 Found in 273ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/pictures/5" for ::1 at 2017-04-19 21:28:19 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 5]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 5], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (73.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 88.5ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 5]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/public/system/pictures/images/000/000/005/original/green.gif
+Started GET "/users/2" for ::1 at 2017-04-19 21:29:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (54.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 69.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/pictures/new" for ::1 at 2017-04-19 21:29:29 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-19 21:29:40 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zJs4cvhEZfySilTtbOuknB7X6OaXp47ZdRd5a96gBxp6kbWyCxVb5V5lrmvE27nk5QE2EfTMZSp3BSxbpKRq4g==", "picture"=>{"name"=>"Test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ec4816c70 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-46059-1tb69n8.gif>, @original_filename="green.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-1ibgpfe.gif'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-kpd5gt.gif'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "Test"], ["image_file_name", "green.gif"], ["image_content_type", "image/gif"], ["image_file_size", 510], ["image_updated_at", 2017-04-20 01:29:40 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 6], ["category_id", 1]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 13.9ms)
+
+
+  
+NoMethodError (undefined method `category_list' for #<Picture:0x007f9ec49137b8>
+Did you mean?  category_list=
+               category_ids
+               category_ids=):
+  
+app/controllers/pictures_controller.rb:23:in `create'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.8ms)
+Started POST "/pictures" for ::1 at 2017-04-19 21:31:53 -0400
+  
+SyntaxError (/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/controllers/pictures_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...egory.find_or_create_by(:name "Green")
+...                               ^
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/controllers/pictures_controller.rb:17: syntax error, unexpected ')', expecting keyword_end
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/controllers/pictures_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pictures_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/controllers/pictures_controller.rb:17: syntax error, unexpected ')', expecting keyword_end
+app/controllers/pictures_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.1ms)
+Started POST "/pictures" for ::1 at 2017-04-19 21:31:57 -0400
+  
+SyntaxError (/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/controllers/pictures_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...egory.find_or_create_by(:name "Green")
+...                               ^
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/controllers/pictures_controller.rb:17: syntax error, unexpected ')', expecting keyword_end
+/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/app/controllers/pictures_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pictures_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/controllers/pictures_controller.rb:17: syntax error, unexpected ')', expecting keyword_end
+app/controllers/pictures_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.5ms)
+Started POST "/pictures" for ::1 at 2017-04-19 21:32:12 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"------WebKitFormBoundarywmzRfEjqYXni4AGv\r\nContent-Disposition: form-data; name"=>"\"utf8\"\r\n\r\n✓\r\n------WebKitFormBoundarywmzRfEjqYXni4AGv\r\nContent-Disposition: form-data; name=\"authenticity_token\"\r\n\r\n3r44P6gst8crgluo11351HtJFBGS3MZeuIeqW3f0qW8 BPEyT2ltJ8UltnVGrH0oZT3wdoSSdZvpDdGqRFs8xA==\r\n------WebKitFormBoundarywmzRfEjqYXni4AGv\r\nContent-Disposition: form-data; name=\"picture[name]\"\r\n\r\nTest\r\n------WebKitFormBoundarywmzRfEjqYXni4AGv\r\nContent-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n\r\nGIF89a[\u0001:\u0001\x80\u0000\u0000P\xB9H\u0000\u0000\u0000!\xF9\u0004\u0000\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000[\u0001:\u0001\u0000\u0002\xFF\x84\x8F\xA9\xCB\xED\u000F\xA3\x9C\xB4ڋ\xB3\u07BC\xFB\u000F\x86\xE2H\x96扦\xEAʶ\xEE\v\xC7\xF2L\xD7\xF6\x8D\xE7\xFA\xCE\xF7\xFE\u000F\f\n\x87Ģ\xF1\x88L*\x97̦\xF3\t\x8DJ\xA7Ԫ\xF5\x8A\xCDj\xB7ܮ\xF7\v\u000E\x8B\xC7\xE4\xB2\xF9\x8CN\xAB\xD7\xEC\xB6\xFB\r\x8F\xCB\xE7\xF4\xBA\xFD\x8E\xCF\xEB\xF7\xFC\xBE\xFF\u000F\u0018(8HXhx\x88\x98\xA8\xB8\xC8\xD8\xE8\xF8\b\u0019)9IYiy\x89\x99\xA9\xB9\xC9\xD9\xE9\xF9\t\u001A*:JZjz\x8A\x9A\xAA\xBA\xCA\xDA\xEA\xFA\n\e ;K[k{\x8B\x9B\xAB\xBB\xCB\xDB\xEB\xFB\v\u001C,<L\\l|\x8C\x9C\xAC\xBC\xCC\xDC\xEC\xFC\f\u001D-=M]m}\x8D\x9D\xAD\xBD\xCD\xDD\xED\xFD\r\u001E.>N^n~\x8E\x9E\xAE\xBE\xCE\xDE\xEE\xFE\u000E\u001F/?O_o\u007F\x8F\x9F\xAF\xBF\xCF\xDF\xEF\xFF\u000F0\xA0\xC0\x81\u0004\v\u001A<\x880\xA1\f\e:|\b1\xA2ĉ\u0014 Z\xBC\x881\xA3ƍ\xD5\u001C;z\xFC\b2\xA4ȑ$K\x9A<\x892\xA5ʕ,[\xBA|\t3\xA6̙4kڼ\x893\xA7Ν<{\xFA\xFC\t4\xA8СD\x8B\u001A=\x8A4\xA9ҥL\x9B:}\n5\xAAԩT\xABZ\xBD\x8A5\xAB֭\\\xBBz\xFD\n6\xACرd˚=\x8B6\xADڵlۺ}\v7\xAEܹt\xEBڽ\x8B7\xAF\u07BD|\xFB\xFA\xFD\v8\xB0\xE0\xC1\x84\v\e>\x8C8\xB1\xE2Ō\e;~\f9\xB2\xE4ɔ [\xBE\x8C9\xB3\xE6͜;{\xFE\f:\xB4\xE8ѤK\x9B>\x8D:\xB5\xEAլ[\xBB~\r;\xB6\xECٴk۾\x8D;\xB7\xEEݼ{\xFB\xFE\r<\xB8\xF0\xE1ċ\e?\x8E<\xB9\xF2\xE5̛;\u007F\u000E=\xBA\xF4\xE9ԫ[\xBFT\u0000\u0000;\r\n------WebKitFormBoundarywmzRfEjqYXni4AGv\r\nContent-Disposition: form-data; name=\"categories\"\r\n\r\ntest\r\n------WebKitFormBoundarywmzRfEjqYXni4AGv\r\nContent-Disposition: form-data; name=\"commit\"\r\n\r\nCreate Picture\r\n------WebKitFormBoundarywmzRfEjqYXni4AGv--\r\n"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:223:in `handle_unverified_request'
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:218:in `verify_authenticity_token'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.4ms)
+Started POST "/pictures" for ::1 at 2017-04-19 21:32:18 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3r44P6gst8crgluo11351HtJFBGS3MZeuIeqW3f0qW8+BPEyT2ltJ8UltnVGrH0oZT3wdoSSdZvpDdGqRFs8xA==", "picture"=>{"name"=>"Test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ec4c01bc8 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170419-46059-2zpag8.gif>, @original_filename="green.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"green.gif\"\r\nContent-Type: image/gif\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-1e5jit0.gif'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/9f27410725ab8cc8854a2769c7a516b820170419-46059-srl6mn.gif'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "Test"], ["image_file_name", "green.gif"], ["image_content_type", "image/gif"], ["image_file_size", 510], ["image_updated_at", 2017-04-20 01:32:18 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 7], ["category_id", 1]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Green"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Green"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 7], ["category_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/7
+Completed 302 Found in 272ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/pictures/7" for ::1 at 2017-04-19 21:32:18 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 7]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 7], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mPictureCategory Load (0.2ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 7], ["category_id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (86.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 101.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-20 10:13:57 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_leaders" ON "users"."id" = "user_leaders"."leader_id" WHERE "user_leaders"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 42.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/pictures/new" for ::1 at 2017-04-20 10:13:59 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures" for ::1 at 2017-04-20 10:14:10 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMAuvYo/J8JT0764j1k151KhMolvDyNTtuxZsDXXTlqmyqN9eW4Z2588RD4naSifqXfsfgxkyKC0/gyAT9Mjog==", "picture"=>{"name"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ebe131a78 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170420-46059-iua8qy.png>, @original_filename="225px-Solid_blue.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"225px-Solid_blue.svg.png\"\r\nContent-Type: image/png\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170420-46059-9lxece.png'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170420-46059-14fpkfl.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "test"], ["image_file_name", "225px-Solid_blue.svg.png"], ["image_content_type", "image/png"], ["image_file_size", 695], ["image_updated_at", 2017-04-20 14:14:10 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 8], ["category_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 7.8ms)
+
+
+  
+NoMethodError (undefined method `find_or_creat_by' for Category(id: integer, name: string):Class
+Did you mean?  find_or_create_by
+               find_or_create_by!):
+  
+app/models/picture.rb:150:in `categorize'
+app/controllers/pictures_controller.rb:16:in `create'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.7ms)
+Started POST "/pictures" for ::1 at 2017-04-20 10:14:24 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"------WebKitFormBoundaryNnnInAY4NbQ0X1BN\r\nContent-Disposition: form-data; name"=>"\"utf8\"\r\n\r\n✓\r\n------WebKitFormBoundaryNnnInAY4NbQ0X1BN\r\nContent-Disposition: form-data; name=\"authenticity_token\"\r\n\r\nEMAuvYo/J8JT0764j1k151KhMolvDyNTtuxZsDXXTlqmyqN9eW4Z2588RD4naSifqXfsfgxkyKC0/gyAT9Mjog==\r\n------WebKitFormBoundaryNnnInAY4NbQ0X1BN\r\nContent-Disposition: form-data; name=\"picture[name]\"\r\n\r\ntest\r\n------WebKitFormBoundaryNnnInAY4NbQ0X1BN\r\nContent-Disposition: form-data; name=\"picture[image]\"; filename=\"225px-Solid_blue.svg.png\"\r\nContent-Type: image/png\r\n\r\n\x89PNG\r\n\u001A\n\u0000\u0000\u0000\rIHDR\u0000\u0000\u0000\xE1\u0000\u0000\u0000\xE1\b\u0002\u0000\u0000\u0000\xB1\xD1E-\u0000\u0000\u0000\u0006bKGD\u0000\xFF\u0000\xFF\u0000\xFF\xA0\xBD\xA7\x93\u0000\u0000\u0002lIDATx\x9C\xED\xD21\u0001\u0000 \f\xC0\xB0\x81\u007F\xCF \x81\x93\u001E\x89\x82\u001E]3g l\xFF\u000E\x80\a\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4y\x94:\x8FR\xE7Q\xEA<J\x9DG\xA9\xF3(u\u001E\xA5Σ\xD4]\x94\v\u0002\xC1\xFF9\xD8:\u0000\u0000\u0000\u0000IEND\xAEB`\x82\r\n------WebKitFormBoundaryNnnInAY4NbQ0X1BN\r\nContent-Disposition: form-data; name=\"categories\"\r\n\r\ntest\r\n------WebKitFormBoundaryNnnInAY4NbQ0X1BN\r\nContent-Disposition: form-data; name=\"commit\"\r\n\r\nCreate Picture\r\n------WebKitFormBoundaryNnnInAY4NbQ0X1BN--\r\n"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:223:in `handle_unverified_request'
+actionpack (5.0.2) lib/action_controller/metal/request_forgery_protection.rb:218:in `verify_authenticity_token'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
+Started POST "/pictures" for ::1 at 2017-04-20 10:14:28 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7uYxEo44+HZnF7wxHHLEW4xhnSSSNeuTegQySRceAyjAVHJrX05ATc7sy1VgE/tcEViE4QGZGscYms4F/Ptpw==", "picture"=>{"name"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9ebc9078a8 @tempfile=#<Tempfile:/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/RackMultipart20170420-46059-1b1wbmt.png>, @original_filename="225px-Solid_blue.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"225px-Solid_blue.svg.png\"\r\nContent-Type: image/png\r\n">}, "categories"=>"test", "commit"=>"Create Picture"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170420-46059-11tyr1.png'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/tw/2xq4bqc97qz777196k6cpklc0000gn/T/e1c499e58a7eb864b453260f3743e37e20170420-46059-4b1886.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("user_id", "name", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "test"], ["image_file_name", "225px-Solid_blue.svg.png"], ["image_content_type", "image/png"], ["image_file_size", 695], ["image_updated_at", 2017-04-20 14:14:28 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 9], ["category_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Blue"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "picture_categories" ("picture_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["picture_id", 9], ["category_id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/9
+Completed 302 Found in 242ms (ActiveRecord: 24.0ms)
+
+
+Started GET "/pictures/9" for ::1 at 2017-04-20 10:14:29 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "picture_categories" ON "categories"."id" = "picture_categories"."category_id" WHERE "picture_categories"."picture_id" = $1[0m  [["picture_id", 9]]
+  [1m[36mPictureCategory Load (0.3ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 9], ["category_id", 1], ["LIMIT", 1]]
+  [1m[36mPictureCategory Load (0.3ms)[0m  [1m[34mSELECT  "picture_categories".* FROM "picture_categories" WHERE "picture_categories"."picture_id" = $1 AND "picture_categories"."category_id" = $2 LIMIT $3[0m  [["picture_id", 9], ["category_id", 6], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered pictures/show.html.erb within layouts/application (53.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 70.5ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7775464478374943595);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePictureTagsTable (20170420142428)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7775464478374943595)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7775464478374943595);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePictureTags (20170420142428)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "picture_tags" ("id" serial primary key, "picture_id" integer, "tag_ig" integer)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170420142428"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7775464478374943595)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7775464478374943595);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTags (20170420143135)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "name" character varying)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170420143135"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7775464478374943595)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7775464478374943595);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveTagIgFromPictureTags (20170420143244)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "tags" DROP "tag_ig"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7775464478374943595)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7775464478374943595);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveTagIgFromPictureTags (20170420143244)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "picture_tags" DROP "tag_ig"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170420143244"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7775464478374943595)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7775464478374943595);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTagIdToPictureTags (20170420143425)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "picture_tags" ADD "tag_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170420143425"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7775464478374943595)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "picture_tags" ON "tags"."id" = "picture_tags"."tag_id" WHERE "picture_tags"."picture_id" = $1[0m  [["picture_id", 6]]

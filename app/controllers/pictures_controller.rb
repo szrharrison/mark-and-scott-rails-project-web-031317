@@ -9,8 +9,11 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new( picture_params )
     @picture.category_list = params.require( :categories )
+
     @picture.user = current_user
     if @picture.save
+      #TODO make #categorize
+      @picture.categorize
       redirect_to picture_path( @picture )
     else
       render :new
