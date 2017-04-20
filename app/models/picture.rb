@@ -141,18 +141,19 @@ class Picture < ApplicationRecord
     #this will return true if the image is monochrome, then we can add that as a category
   end
 
-  def categorize
+  def tagorize
+    #implicit self, self.tags and tags are the same thing here
     if green?
-      categories << Category.find_or_create_by(name: "Green")
+      tags << Tag.find_or_create_by(name: "Green")
     end
     if red?
-      categories << Category.find_or_create_by(name: "Red")
+      tags << Tag.find_or_create_by(name: "Red")
     end
     if blue?
-      categories << Category.find_or_create_by(name: "Blue")
+      tags << Tag.find_or_create_by(name: "Blue")
     end
     if gray?
-      categories << Category.find_or_create_by(name: "Gray")
+      tags << Tag.find_or_create_by(name: "Gray")
     end
   end
 
