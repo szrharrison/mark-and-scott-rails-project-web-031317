@@ -12,17 +12,17 @@
       }],
     });
 
-    $('.chips-autocomplete').material_chip({
-      autocompleteOptions: {
-        data: {
-          'Apple': null,
-          'Microsoft': null,
-          'Google': null
-        },
-        limit: Infinity,
-        minLength: 1
-      }
-    });
+    // $('.chips-autocomplete').material_chip({
+    //   autocompleteOptions: {
+    //     data: {
+    //       'Apple': null,
+    //       'Microsoft': null,
+    //       'Google': null
+    //     },
+    //     limit: Infinity,
+    //     minLength: 1
+    //   }
+    // });
 
     $('.chips').on('chip.add', function(e, chip){
       // you have the added chip here
@@ -43,17 +43,15 @@
 <ul>
   <% @picture.categories.each do |category| %>
     <li>
-      <div class="chip">
-        <%= link_to category.name, category %>
+      <%= link_to category.name, category %>
 
-        <% if logged_in? && user_authorized? %>
-          <%= form_tag "/picture-categories/#{PictureCategory.find_by( picture_id: @picture.id, category_id: category.id).id}", method: "delete" do %>
-            <%= hidden_field_tag :picture_id, @picture.id %>
-            <%= hidden_field_tag :category_id, category.id %>
-            <%= submit_tag "X", class: "btn waves-effect waves-light" %>
-          <% end %>
+      <% if logged_in? && user_authorized? %>
+        <%= form_tag "/picture-categories/#{PictureCategory.find_by( picture_id: @picture.id, category_id: category.id).id}", method: "delete" do %>
+          <%= hidden_field_tag :picture_id, @picture.id %>
+          <%= hidden_field_tag :category_id, category.id %>
+          <%= submit_tag "X", class: "btn waves-effect waves-light" %>
         <% end %>
-      </div>
+      <% end %>
     </li>
   <% end %>
 </ul>

@@ -1,5 +1,5 @@
-<% if !@picture.errors.empty? %>
-  <% @picture.errors.full_messages.each do |message| %>
+<% if flash[:notice].present? %>
+  <% flash[:notice].each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
@@ -21,8 +21,13 @@
       </div>
     </div>
     <div class="input-field">
-      <%= label_tag :categories, "Add your tags, separated by commas" %>
-      <%= text_area_tag :categories, nil, class: 'materialize-textarea'  %>
+      <%= f.label :category_ids, "Categories" %>
+      <select name="picture[category_ids][]" multiple>
+        <option value="" disabled selected>Select at least one category</option>
+        <% @categories.each do |category| %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+        <% end %>
+      </select>
     </div>
     <%= f.submit class: "btn waves-effect waves-light" %>
     <% end %>
