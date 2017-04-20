@@ -1,12 +1,14 @@
 <h1><%= @category.name %></h1>
 
-<div class="row">
+<div class="row grid">
   <% @category.pictures.each do |picture| %>
-    <div class="col s6 m4">
+    <div class="col s6 m4 grid-item grid-sizer">
       <div class="card hoverable">
         <div class="card-image">
           <%= link_to "<img src='#{picture.image.url}'><span class='card-title'>#{picture.name}</span>".html_safe, picture %>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite</i></a>
+          <% if logged_in? %>
+            <%= link_to "<i class='material-icons'>favorite</i>".html_safe, "/users/#{current_user.id}/favorites/#{picture.id}", class: "btn-floating halfway-fab waves-effect waves-light red", method: "post" %>
+          <% end %>
         </div>
         <div class="card-content">
           <p>this is default content</p>

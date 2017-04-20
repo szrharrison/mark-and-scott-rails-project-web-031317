@@ -1,7 +1,8 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update]
+  before_action :set_picture, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :edit]
   before_action :restrict_to_users, except: [:index, :show]
+  before_action :following_picture_owner?, only: [:show]
 
   def new
     @picture = Picture.new
@@ -12,7 +13,6 @@ class PicturesController < ApplicationController
 
     @picture.user = current_user
     if @picture.save
-      #TODO make #categorize
       @picture.tagorize_improved
       redirect_to picture_path( @picture )
     else
@@ -33,6 +33,11 @@ class PicturesController < ApplicationController
     end
   end
 
+  def destroy
+    @picture.destroy
+    redirect_to user_path( current_user ), notice: "Successfully deleted #{@picture.name}"
+  end
+
   private
 
   def set_picture
@@ -47,5 +52,9 @@ class PicturesController < ApplicationController
     params_hash = params.require( :picture ).permit( :image, :name )
     params_hash[:category_ids] = params.require( :picture ).require( :category_ids )
     params_hash
+  end
+
+  def following_picture_owner?
+    @following = current_user.leaders.include?( @picture.user )
   end
 end
