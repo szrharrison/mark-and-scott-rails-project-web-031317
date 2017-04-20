@@ -1,4 +1,7 @@
 require 'RMagick'
+require 'face_detect'
+require 'face_detect/adapter/google'
+GOOGLE_CREDENTIALS_JSON= "/Users/admin/flatiron/labs/rails/mark-and-scott-rails-project-web-031317/keys/pixr-23da4be727f5.json"
 include Magick
 
 class Picture < ApplicationRecord
@@ -38,6 +41,46 @@ class Picture < ApplicationRecord
     #use this for testing, need to have X11 runnning for it to work
     #image.display
   end
+
+  def make_bigger
+
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.magnify
+    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/bigger-\1\2'))
+  end
+
+  def make_smaller
+
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.minify
+    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/smaller-\1\2'))
+  end
+
+  def thumbnail
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.thumbnail
+    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/thumbnail-\1\2'))
+  end
+
+  def flip_vertical
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.flip
+    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/vertical-flip-\1\2'))
+  end
+
+  def flip_horizontal
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.flop
+    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/vertical-flip-\1\2'))
+  end
+
+
+
 
   def edge
     #grabs path of image on our server
@@ -155,10 +198,31 @@ class Picture < ApplicationRecord
     if gray?
       tags << Tag.find_or_create_by(name: "Gray")
     end
+    if face?
+      tags << Tag.find_or_create_by(name: "Face")
+    end
   end
 
+  def face?
+    if face_detect
+      #if this returns an object, it means a face was detected
+      true
+    else
+      false
+    end
+  end
 
-
-
+  def face_detect
+    input = File.new(image.path)
+    detector = FaceDetect.new(
+      file: input,
+      adapter: FaceDetect::Adapter::Google
+    )
+    results = detector.run
+    #results
+    face = results.first
+    binding.pry
+    face
+  end
 
 end

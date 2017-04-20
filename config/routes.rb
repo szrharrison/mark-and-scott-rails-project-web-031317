@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, except: :index
   resources :pictures
   resources :categories
+  resources :tags
 
   post '/picture-categories', to: 'picture_categories#create', as: :create_picture_category
   delete '/picture-categories/:id', to: 'picture_categories#destroy', as: :destroy_picture_category
