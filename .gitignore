@@ -1,2 +1,4 @@
 **/tmp/
 public/system
+.byebug_history
+.DS_Store
