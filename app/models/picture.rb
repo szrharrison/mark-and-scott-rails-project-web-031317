@@ -4,7 +4,7 @@ class Picture < ApplicationRecord
   has_many :picture_categories
   has_many :categories, through: :picture_categories
   belongs_to :user
-  has_many :favorites, foreign_key: "favorite_picture"
+  has_many :favorites, foreign_key: "favorite_picture_id"
   has_many :favorited_by, through: :favorites
 
   validates :user_id, presence: true
