@@ -10,6 +10,7 @@ gem 'materialize-sass'
 gem 'material_icons'
 gem 'pry'
 gem 'rmagick'
+gem 'rest_client'
 
 gem 'face_detect'
 gem 'googleauth'
