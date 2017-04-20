@@ -7,9 +7,9 @@
 <% end %>
 
 <h3>Your Pictures:</h3>
-<div class="row">
+<div class="row grid">
   <% @user.pictures.each do |picture| %>
-    <div class="col s6 m4">
+    <div class="col s6 m4 grid-item">
       <div class="card hoverable">
         <div class="card-image">
           <%= link_to "<img src='#{picture.image.url}'><span class='card-title'>#{picture.name}</span>".html_safe, picture %>

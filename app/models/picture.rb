@@ -211,10 +211,8 @@ class Picture < ApplicationRecord
   def tagorize_improved
     #temporarily hosting the image on another site
     image_url = Cloudinary::Uploader.upload(image.path)["url"]
-    api_key = 'acc_486bae7d99a8cbd'
-    api_secret = 'ceaecba1e6d0db768df9671338a18a34'
-
-    auth = 'Basic ' + Base64.strict_encode64( "#{api_key}:#{api_secret}" ).chomp
+    
+    auth = 'Basic ' + Base64.strict_encode64( "#{ENV["agga_api_key"]}:#{ENV["agga_api_secret"]}" ).strip
     response = RestClient.get "https://api.imagga.com/v1/tagging?url=#{image_url}", { :Authorization => auth }
     data = JSON.parse(response)
     data["results"][0]["tags"][0..5].each do |element|

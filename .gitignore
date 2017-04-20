@@ -4,3 +4,6 @@ public/system
 .DS_Store
 log
 keys
+
+# Ignore application configuration
+/config/application.yml
