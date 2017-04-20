@@ -13,7 +13,7 @@ class PicturesController < ApplicationController
     @picture.user = current_user
     if @picture.save
       #TODO make #categorize
-      @picture.tagorize
+      @picture.tagorize_improved
       redirect_to picture_path( @picture )
     else
       redirect_to :new, notice: @picture.errors.full_messages

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dtlxarje1
+  api_key: '648965963271116'
+  api_secret: fW2VZ6VxzoO4-yo9rmG6Ow8hzGI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dtlxarje1
+  api_key: '648965963271116'
+  api_secret: fW2VZ6VxzoO4-yo9rmG6Ow8hzGI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dtlxarje1
+  api_key: '648965963271116'
+  api_secret: fW2VZ6VxzoO4-yo9rmG6Ow8hzGI
+  enhance_image_tag: true
+  static_image_support: false
