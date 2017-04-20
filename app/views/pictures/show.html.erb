@@ -1,35 +1,80 @@
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+    $('.chips').material_chip();
+    $('.chips-initial').material_chip({
+      data: [{
+        tag: 'Apple',
+      }, {
+        tag: 'Microsoft',
+      }, {
+        tag: 'Google',
+      }],
+    });
+
+    $('.chips-autocomplete').material_chip({
+      autocompleteOptions: {
+        data: {
+          'Apple': null,
+          'Microsoft': null,
+          'Google': null
+        },
+        limit: Infinity,
+        minLength: 1
+      }
+    });
+
+    $('.chips').on('chip.add', function(e, chip){
+      // you have the added chip here
+    });
+
+    $('.chips').on('chip.delete', function(e, chip){
+      // you have the deleted chip here
+    });
+  });
+
+</script>
 <h3><%= @picture.name %></h3>
 <%= image_tag @picture.image.url %>
 <% if session[:user_id] != @picture.user.id && logged_in? %>
-  <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn", method: "post" %>
+  <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
 <% end %>
 <h5>Categories</h5>
 <ul>
   <% @picture.categories.each do |category| %>
     <li>
-      <%= link_to category.name, category %>
-      <% if logged_in? && user_authorized? %>
-        <%= form_tag "/picture-categories/#{PictureCategory.find_by( picture_id: @picture.id, category_id: category.id).id}", method: "delete" do %>
-          <%= hidden_field_tag :picture_id, @picture.id %>
-          <%= hidden_field_tag :category_id, category.id %>
-          <%= submit_tag "X" %>
+      <div class="chip">
+        <%= link_to category.name, category %>
+
+        <% if logged_in? && user_authorized? %>
+          <%= form_tag "/picture-categories/#{PictureCategory.find_by( picture_id: @picture.id, category_id: category.id).id}", method: "delete" do %>
+            <%= hidden_field_tag :picture_id, @picture.id %>
+            <%= hidden_field_tag :category_id, category.id %>
+            <%= submit_tag "X", class: "btn waves-effect waves-light" %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </li>
   <% end %>
 </ul>
 <% if logged_in? && user_authorized? %>
-  <p><%= link_to "Edit image", edit_picture_path( @picture ), class: "btn" %></p>
-  <br>
+  <p><%= link_to "Edit image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %></p>
   <% if !!@picture_category && !@picture_category.errors.empty? %>
-      <% @picture_category.errors.full_messages.each do |message| %>
-        <%= message %>
-      <% end %>
+    <% @picture_category.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
   <% end %>
+
   <%= form_tag '/picture-categories' do %>
     <%= hidden_field_tag :'picture_category[picture_id]', @picture.id %>
-    <%= label_tag :'picture_category[category_id]', "Categories:" %>
-    <%= select_tag(:'picture_category[category_id]', options_from_collection_for_select( @picture.non_category, "id", "name" ) ) %>
-    <%= submit_tag "Add Category" %>
+    <div class="row">
+      <div class="col s5">
+        <div class="input-field">
+          <%= label_tag :'picture_category[category_ids][]', "Categories:" %>
+          <%= select_tag(:'picture_category[category_ids][]', options_from_collection_for_select( @picture.non_category, "id", "name" ), multiple: true, include_blank: true ) %>
+        </div>
+      </div>
+    </div>
+    <%= submit_tag "Add Category", class: "btn" %>
   <% end %>
 <% end %>

@@ -3,19 +3,30 @@
     <%= message %>
   <% end %>
 <% end %>
-<%= form_for @picture do |f| %>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %><br>
-  <br>
-  <%= f.label :image %><br>
-  <%= f.file_field :image %><br>
-  <br>
-  <%= label_tag :categories, "Add your tags, separated by commas" %><br>
-  <%= text_area_tag :categories %><br>
-  <br>
-  <%= f.submit class: "btn" %>
-<% end %>
-<br>
-
+<div class="row">
+  <div class="col s6">
+    <%= form_for @picture do |f| %>
+    <div class="input-field">
+      <%= f.label :name, class: 'active' %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="input-field file-field">
+      <div class="btn">
+        <%= f.label :image, class: 'hidden' %>
+        <span>Image</span>
+        <%= f.file_field :image %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+    <div class="input-field">
+      <%= label_tag :categories, "Add your tags, separated by commas", class: 'active' %>
+      <%= text_area_tag :categories, @picture_categories, class: 'materialize-textarea' %>
+    </div>
+    <%= f.submit class: "btn waves-effect waves-light" %>
+    <% end %>
+  </div>
+</div>
 <h5>Preview:</h5>
 <%= image_tag @picture.image.url %>
