@@ -209,18 +209,15 @@ class Picture < ApplicationRecord
   end
 
   def tagorize_improved
-    #temporarily hosting the image on another site
-    image_url = Cloudinary::Uploader.upload(image.path)["url"]
-    api_key = 'acc_486bae7d99a8cbd'
-    api_secret = 'ceaecba1e6d0db768df9671338a18a34'
-
-    auth = 'Basic ' + Base64.strict_encode64( "#{api_key}:#{api_secret}" ).chomp
-    response = RestClient.get "https://api.imagga.com/v1/tagging?url=#{image_url}", { :Authorization => auth }
-    data = JSON.parse(response)
-    data["results"][0]["tags"][0..5].each do |element|
+    image_url = Adapter::CloudinaryAdapter.generate_url_for(image)
+    response = Adapter::RestClientAdapter.generate_response(image_url)
+    data = Adapter::RestClientAdapter.generate_tags(response)
+    data[0..5].each do |element|
       tags << Tag.find_or_create_by(name: element["tag"])
     end
-
+    if face? #add face tag if there's a face in the image
+      tags << Tag.find_or_create_by(name: "Face")
+    end
   end
 
 
