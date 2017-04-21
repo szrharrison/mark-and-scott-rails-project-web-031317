@@ -242,4 +242,6 @@ class Picture < ApplicationRecord
     face
   end
 
+  #analyzation methods
+
 end
