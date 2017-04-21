@@ -15,7 +15,7 @@ class Picture < ApplicationRecord
   has_many :picture_tags
   has_many :tags, -> { distinct }, through: :picture_tags
   belongs_to :user
-  has_many :favorites, foreign_key: "favorite_picture_id"
+  has_many :favorites, foreign_key: "favorite_picture_id", dependent: :destroy
   has_many :favorited_by, -> { distinct }, through: :favorites
 
   validates :user_id, presence: true
@@ -211,7 +211,7 @@ class Picture < ApplicationRecord
   def tagorize_improved
     #temporarily hosting the image on another site
     image_url = Cloudinary::Uploader.upload(image.path)["url"]
-    
+
     auth = 'Basic ' + Base64.strict_encode64( "#{ENV["agga_api_key"]}:#{ENV["agga_api_secret"]}" ).strip
     response = RestClient.get "https://api.imagga.com/v1/tagging?url=#{image_url}", { :Authorization => auth }
     data = JSON.parse(response)
