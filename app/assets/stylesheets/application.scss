@@ -39,22 +39,19 @@ nav {
   a:hover {
     color: $highlight-text-color;
   }
-}
-form {
-  .row {
-    margin-bottom: 0;
-  }
-  .input-field {
-    label:not(.label-icon).active {
-      -webkit-transform: translateY(-80%);
-      transform: translateY(-80%);
-      color: $highlight-text-color;
-      margin-right: 10px;
+  form {
+    .input-field {
+      label:not(.label-icon).active {
+        -webkit-transform: translateY(25%) translateX(25%);
+        transform: translateY(25%) translateX(25%);
+        color: $highlight-text-color;
+        margin-right: 10px;
+      }
+      .prefix.active { color: $highlight-text-color;}
     }
-    .prefix.active { color: $highlight-text-color;}
-  }
-  button {
-    margin-left: 10px
+    button {
+      margin-left: 10px
+    }
   }
 }
 .btn:hover {

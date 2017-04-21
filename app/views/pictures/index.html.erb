@@ -1,6 +1,8 @@
 <h2>All Images:</h2>
 <div class="row grid">
   <% @pictures.each do |picture| %>
-    <%= render partial: "picture", locals: { picture: picture } %>
+    <% if !logged_in? || picture.user_id != current_user.id %>
+      <%= render partial: "picture", locals: { picture: picture } %>
+    <% end %>
   <% end %>
 </div>

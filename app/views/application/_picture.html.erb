@@ -1,13 +1,22 @@
-<% if !logged_in? || picture.user_id != current_user.id %>
+
+<script>
+$( document ).on('turbolinks:load', function() {
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+});
+</script>
   <div class="col m6 l4 grid-sizer grid-item">
     <div class="card hoverable">
       <div class="card-image">
         <%= link_to "<img src='#{picture.image.url}'><span class='card-title'>#{picture.name}</span>".html_safe, picture %>
-        <% if logged_in? %>
+        <% if logged_in? && current_user != picture.user %>
           <% if current_user.favorite_pictures.include?(picture) %>
-            <%= link_to "<i class='material-icons red-text'>favorite_border</i>".html_safe, "/users/#{current_user.id}/favorites/#{Favorite.find_by( favorited_by: current_user, favorite_picture: picture ).id}", class: "btn-floating halfway-fab waves-effect waves-light white", method: "delete" %>
+            <%= link_to "<i class='material-icons red-text'>favorite_border</i>".html_safe, "/users/#{current_user.id}/favorites/#{Favorite.find_by( favorited_by: current_user, favorite_picture: picture ).id}", class: "btn-floating halfway-fab waves-effect waves-light white tooltipped", 'data-position': "bottom", 'data-delay': "50", 'data-tooltip': "Remove Favorite", method: "delete" %>
           <% else %>
-            <%= link_to "<i class='material-icons'>favorite</i>".html_safe, "/users/#{current_user.id}/favorites/#{picture.id}", class: "btn-floating halfway-fab waves-effect waves-light red", method: "post" %>
+            <%= link_to "<i class='material-icons'>favorite</i>".html_safe, "/users/#{current_user.id}/favorites/#{picture.id}", class: "btn-floating halfway-fab waves-effect waves-light red tooltipped", 'data-position': "bottom", 'data-delay': "50", 'data-tooltip': "Add Favorite", method: "post" %>
           <% end %>
         <% end %>
       </div>
@@ -20,4 +29,3 @@
       </div>
     </div>
   </div>
-<% end %>

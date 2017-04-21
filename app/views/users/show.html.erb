@@ -12,14 +12,19 @@
 <% end %>
 <h3>Favorite Pictures:</h3>
 <div class="row grid">
-<% @user.favorite_pictures.each do |picture| %>
-  <%= render partial: "picture", locals: { picture: picture } %>
-<% end %>
+  <% @user.favorite_pictures.each do |picture| %>
+    <%= render partial: "picture", locals: { picture: picture } %>
+  <% end %>
 </div>
 <h3>You are following:</h3>
 
 <% @user.leaders.each do |leader| %>
   <%= leader.username %>
+  <div class="row grid">
+    <% leader.pictures.each do |picture| %>
+      <%= render partial: "picture", locals: { picture: picture } %>
+    <% end %>
+  </div>
 <% end %>
 
 <h3>Your Pictures:</h3>
