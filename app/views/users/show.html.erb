@@ -1,18 +1,40 @@
 <h1>Hello, <%= @user.username %>!</h1>
-
+<% if flash.notice.present? %>
+<div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel red">
+        <span class="white-text">
+          <%= flash.notice %>
+        </span>
+      </div>
+    </div>
+  </div>
+<% end %>
+<h3>Favorite Pictures:</h3>
+<div class="row grid">
+  <% @user.favorite_pictures.each do |picture| %>
+    <%= render partial: "picture", locals: { picture: picture } %>
+  <% end %>
+</div>
 <h3>You are following:</h3>
 
 <% @user.leaders.each do |leader| %>
   <%= leader.username %>
-<% end %>
-
-<h3>Your Pictures:</h3>
-
-<% @user.pictures.each do |picture| %>
-  <div class="pictures-display">
-    <h5><%= picture.name %></h5>
-    <%= link_to "<img src='#{picture.image.url}'>".html_safe, picture %>
+  <div class="row grid">
+    <% leader.pictures.each do |picture| %>
+      <%= render partial: "picture", locals: { picture: picture } %>
+    <% end %>
   </div>
 <% end %>
 
-<%= link_to "Add a picture", new_picture_path, class: "btn waves-effect waves-light" %>
+<h3>Your Pictures:</h3>
+<div class="row grid">
+  <% @user.pictures.each do |picture| %>
+    <%= render partial: "picture", locals: { picture: picture } %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col s12">
+    <%= link_to "Add a picture", new_picture_path, class: "btn waves-effect waves-light" %>
+  </div>
+</div>

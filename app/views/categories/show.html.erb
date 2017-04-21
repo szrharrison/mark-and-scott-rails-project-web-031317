@@ -1,9 +1,9 @@
 <h1><%= @category.name %></h1>
 
-<ul class="category-display">
+<div class="row grid">
   <% @category.pictures.each do |picture| %>
-    <li class="pictures-display">
-      <%= link_to "<p>#{picture.name}</p><img src='#{picture.image.url}'>".html_safe, picture %>
-    </li>
+    <% if !logged_in? || picture.user_id != current_user.id %>
+      <%= render partial: "picture", locals: { picture: picture } %>
+    <% end %>
   <% end %>
-</ul>
+</div>

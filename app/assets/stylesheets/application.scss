@@ -25,6 +25,13 @@ $background-color: #556270;
 nav {
   @include transition( 0.3s );
   background-color: $background-color;
+  text-align: center;
+  .row {
+    margin-bottom: 0;
+  }
+  .left-bar {
+    border-left: 1px solid #5788bc;
+  }
   a {
     @include transition( 0.3s );
     text-align: center;
@@ -32,45 +39,27 @@ nav {
   a:hover {
     color: $highlight-text-color;
   }
-  ul {
-    li {
-      border-left: 1px solid #5788bc;
+  form {
+    .input-field {
+      label:not(.label-icon).active {
+        -webkit-transform: translateY(25%) translateX(25%);
+        transform: translateY(25%) translateX(25%);
+        color: $highlight-text-color;
+        margin-right: 10px;
+      }
+      .prefix.active { color: $highlight-text-color;}
     }
-  }
-}
-form {
-  .row {
-    margin-bottom: 0;
-  }
-  .input-field {
-    label:not(.label-icon).active {
-      -webkit-transform: translateY(-80%);
-      transform: translateY(-80%);
-      color: $highlight-text-color;
-      margin-right: 10px;
+    button {
+      margin-left: 10px
     }
-    .prefix.active { color: $highlight-text-color;}
-  }
-  button {
-    margin-left: 10px
   }
 }
 .btn:hover {
   color: $highlight-text-color;
 }
-.pictures-display {
-  float: left;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #000;
-}
-.category-display {
-  list-style: none;
-}
-img {
-  max-width: 80vw;
-  max-height: 80vh;
-}
 .hidden {
   display: none;
+}
+.card-image .card-title {
+  background-color: rgba(0,0,0,0.4);
 }

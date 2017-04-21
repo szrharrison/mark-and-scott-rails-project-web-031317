@@ -15,7 +15,7 @@ class Picture < ApplicationRecord
   has_many :picture_tags
   has_many :tags, -> { distinct }, through: :picture_tags
   belongs_to :user
-  has_many :favorites, foreign_key: "favorite_picture_id"
+  has_many :favorites, foreign_key: "favorite_picture_id", dependent: :destroy
   has_many :favorited_by, -> { distinct }, through: :favorites
 
   validates :user_id, presence: true
@@ -209,6 +209,7 @@ class Picture < ApplicationRecord
   end
 
   def tagorize_improved
+
     image_url = Adapter::CloudinaryAdapter.generate_url_for(image)
     response = Adapter::RestClientAdapter.generate_response(image_url)
     data = Adapter::RestClientAdapter.generate_tags(response)

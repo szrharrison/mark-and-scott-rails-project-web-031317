@@ -1,42 +1,6 @@
-<script>
-  $(document).ready(function() {
-    $('select').material_select();
-    $('.chips').material_chip();
-    $('.chips-initial').material_chip({
-      data: [{
-        tag: 'Apple',
-      }, {
-        tag: 'Microsoft',
-      }, {
-        tag: 'Google',
-      }],
-    });
-
-    // $('.chips-autocomplete').material_chip({
-    //   autocompleteOptions: {
-    //     data: {
-    //       'Apple': null,
-    //       'Microsoft': null,
-    //       'Google': null
-    //     },
-    //     limit: Infinity,
-    //     minLength: 1
-    //   }
-    // });
-
-    $('.chips').on('chip.add', function(e, chip){
-      // you have the added chip here
-    });
-
-    $('.chips').on('chip.delete', function(e, chip){
-      // you have the deleted chip here
-    });
-  });
-
-</script>
 <h3><%= @picture.name %></h3>
 <%= image_tag @picture.image.url %>
-<% if session[:user_id] != @picture.user.id && logged_in? %>
+<% if session[:user_id] != @picture.user.id && logged_in? && !@following %>
   <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
 <% end %>
 <h5>Categories</h5>
@@ -58,37 +22,18 @@
 
 <h5>Tags</h5>
 <ul>
-  <% @picture.tags.each do |tag| %>
+  <% @picture.picture_tags.each do |tag| %>
     <li>
-      <%= link_to tag.name, tag_path %>
-      <% if logged_in? && user_authorized? %>
-        <%= form_tag "/picture-tags/#{PictureTag.find_by( picture_id: @picture.id, tag_id: tag.id).id}", method: "delete" do %>
-          <%= hidden_field_tag :picture_id, @picture.id %>
-          <%= hidden_field_tag :tag_id, tag.id %>
-          <%= submit_tag "X" %>
+      <div class="chip">
+        <%= link_to tag.tag.name, tag.tag %>
+        <% if logged_in? && user_authorized? %>
+          <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-tags/#{tag.id}", method: "delete" %>
         <% end %>
-      <% end %>
+      </div>
     </li>
   <% end %>
 </ul>
 <% if logged_in? && user_authorized? %>
-  <p><%= link_to "Edit image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %></p>
-  <% if !!@picture_category && !@picture_category.errors.empty? %>
-    <% @picture_category.errors.full_messages.each do |message| %>
-      <%= message %>
-    <% end %>
-  <% end %>
-
-  <%= form_tag '/picture-categories' do %>
-    <%= hidden_field_tag :'picture_category[picture_id]', @picture.id %>
-    <div class="row">
-      <div class="col s5">
-        <div class="input-field">
-          <%= label_tag :'picture_category[category_ids][]', "Categories:" %>
-          <%= select_tag(:'picture_category[category_ids][]', options_from_collection_for_select( @picture.non_category, "id", "name" ), multiple: true, include_blank: true ) %>
-        </div>
-      </div>
-    </div>
-    <%= submit_tag "Add Category", class: "btn" %>
-  <% end %>
+  <p><%= link_to "Edit Image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %>
+  <%= link_to "Delete Image", "/pictures/#{@picture.id}", class: "btn waves-effect waves-light", method: "delete" %></p>
 <% end %>

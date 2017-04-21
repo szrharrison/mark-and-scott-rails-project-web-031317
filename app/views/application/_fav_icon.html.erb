@@ -1,0 +1,7 @@
+<% if logged_in? %>
+  <% if current_user.favorite_pictures.include?(picture) %>
+    <%= link_to "<i class='material-icons red-text'>favorite_border</i>".html_safe, "/users/#{current_user.id}/favorites/#{Favorite.find_by( favorited_by: current_user, favorite_picture: picture ).id}", class: "btn-floating halfway-fab waves-effect waves-light white", method: "delete" %>
+  <% else %>
+    <%= link_to "<i class='material-icons'>favorite</i>".html_safe, "/users/#{current_user.id}/favorites/#{picture.id}", class: "btn-floating halfway-fab waves-effect waves-light red", method: "post" %>
+  <% end %>
+<% end %>
