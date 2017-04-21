@@ -1,15 +1,6 @@
 <h2>All Images:</h2>
 <div class="row grid">
   <% @pictures.each do |picture| %>
-    <div class="col s6 m4 grid-sizer grid-item">
-      <div class="card hoverable">
-        <div class="card-image">
-          <%= link_to "<img src='#{picture.image.url}'><span class='card-title'>#{picture.name}</span>".html_safe, picture %>
-          <% if logged_in? %>
-            <%= link_to "<i class='material-icons'>favorite</i>".html_safe, "/users/#{current_user.id}/favorites/#{picture.id}", class: "btn-floating halfway-fab waves-effect waves-light red", method: "post" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
+    <%= render partial: "picture", locals: { picture: picture } %>
   <% end %>
 </div>

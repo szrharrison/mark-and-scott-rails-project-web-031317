@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   before_action :restrict_to_users
   before_action :set_user
-  before_action :set_picture
+  before_action :set_picture, only: :create
 
   def create
     @favorite = Favorite.new( favorited_by: @user, favorite_picture: @picture )
@@ -10,9 +10,9 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @picture_tag.destroy
-    @picture = Picture.find( params[:picture_id] )
-    redirect_to picture_path( @picture )
+    @favorite = Favorite.find( params[:id] )
+    @favorite.destroy
+    redirect_to user_path( @user )
   end
 
   private

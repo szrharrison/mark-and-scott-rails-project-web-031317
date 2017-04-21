@@ -1,5 +1,6 @@
-<% if !@user.errors.empty? %>
-  <% @user.errors.full_messages.each do |message| %>
+<h2>Sign Up:</h2>
+<% if flash[:notice].present? %>
+  <% flash[:notice].each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
@@ -11,5 +12,5 @@
   <%= f.label :password_confirmation, "Confirm Password:" %><br>
   <%= f.password_field :password_confirmation %><br>
   <br>
-  <%= f.submit %>
+  <%= f.submit class: "btn waves-effect waves-light" %>
 <% end %>

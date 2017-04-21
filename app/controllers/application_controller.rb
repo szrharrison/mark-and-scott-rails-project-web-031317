@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def restrict_to_users
     unless logged_in?
-      redirect_to login_path
+      redirect_to root_path
     end
   end
 
@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @current_user ||= User.find( session[:user_id] )
+    if logged_in?
+      @current_user ||= User.find( session[:user_id] )
+    end
   end
 end

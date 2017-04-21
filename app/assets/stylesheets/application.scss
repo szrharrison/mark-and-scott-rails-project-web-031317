@@ -25,17 +25,19 @@ $background-color: #556270;
 nav {
   @include transition( 0.3s );
   background-color: $background-color;
+  text-align: center;
+  .row {
+    margin-bottom: 0;
+  }
+  .left-bar {
+    border-left: 1px solid #5788bc;
+  }
   a {
     @include transition( 0.3s );
     text-align: center;
   }
   a:hover {
     color: $highlight-text-color;
-  }
-  ul {
-    li {
-      border-left: 1px solid #5788bc;
-    }
   }
 }
 form {

@@ -18,48 +18,7 @@
     });
   </script>
   <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <div class="row">
-            <div class="col s2">
-              <%= link_to 'Pixr', root_path, id:"logo" %>
-            </div>
-            <% if logged_in? %>
-              <ul class="right">
-                <li>
-                  <%= link_to "View your pics", current_user %>
-                </li>
-                <li>
-                  <%= link_to "Logout", "/sessions/#{current_user.id}", method: 'delete' %>
-                </li>
-              </ul>
-            <% else %>
-              <%= form_tag '/sessions', class: "col s6 right" do %>
-                <div class="row">
-                  <div class="input-field inline col s4">
-                    <i class="material-icons prefix">account_circle</i>
-                    <%= label_tag :username, "Username:" %>
-                    <%= text_field_tag :username %>
-                  </div>
-                  <div class="input-field inline col s4">
-                    <i class="material-icons prefix">lock</i>
-                    <%= label_tag :password, "Password:" %>
-                    <%= password_field_tag :password %>
-                  </div>
-                  <div class="col s4">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">
-                      Login
-                    </button>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-            <% end %>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <%= render 'nav_bar' %>
     <div class="container">
         <%= yield %>
       </div>
