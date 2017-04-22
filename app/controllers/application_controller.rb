@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?, :authorize_user, :restrict_to_users, :user_authorized?
+  helper_method :current_user, :logged_in?, :authorize_user, :restrict_to_users, :user_authorized?, :following_picture_owner?
 
   private
   def logged_in?
@@ -27,5 +27,9 @@ class ApplicationController < ActionController::Base
     if logged_in?
       @current_user ||= User.find( session[:user_id] )
     end
+  end
+
+  def following_picture_owner?
+    @following = current_user.leaders.include?( @picture.user )
   end
 end

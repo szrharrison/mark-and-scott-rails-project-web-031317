@@ -18,7 +18,7 @@
 </div>
 <h3>You are following:</h3>
 
-<% @user.leaders.each do |leader| %>
+<% @user.leaders.sort_by { |leader| leader.username }.each do |leader| %>
   <%= leader.username %>
   <div class="row grid">
     <% leader.pictures.each do |picture| %>
@@ -29,7 +29,7 @@
 
 <h3>Your Pictures:</h3>
 <div class="row grid">
-  <% @user.pictures.each do |picture| %>
+  <% @user.pictures.sort_by { |picture| picture.favorited_by_ids.count }.each do |picture| %>
     <%= render partial: "picture", locals: { picture: picture } %>
   <% end %>
 </div>
