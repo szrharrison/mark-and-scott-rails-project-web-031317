@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
-  before_action :restrict_to_users, only: [:show, :edit, :update]
-  before_action :authorize_user, only: [:show, :edit, :update]
+  before_action :restrict_to_users, only: [:edit, :update]
+  before_action :authorize_user, only: [:edit, :update]
 
   def new
     @user = User.new
@@ -14,6 +14,14 @@ class UsersController < ApplicationController
       redirect_to user_path( @user )
     else
       redirect_to new_user_path, notice: @user.errors.full_messages
+    end
+  end
+
+  def update
+    if @user.update( user_params )
+      redirect_to user_path( @user )
+    else
+      redirect_to edit_user_path( @user ), notice: @user.errors.full_messages
     end
   end
 

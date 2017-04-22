@@ -1,11 +1,13 @@
 <h1>Hello, <%= @user.username %>!</h1>
-<% if flash.notice.present? %>
+<% if flash[:notice].present? %>
 <div class="row">
     <div class="col s12 m5">
       <div class="card-panel red">
-        <span class="white-text">
-          <%= flash.notice %>
-        </span>
+        <% flash[:notice].each do |message| %>
+          <p class="white-text">
+            <%= message %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>
