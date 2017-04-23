@@ -3,7 +3,24 @@ Rails.application.routes.draw do
   get '/', to: 'pictures#index', as: :root
 
   resources :users, except: :index
+
   resources :pictures
+  post 'pictures/:id/black_and_white', to: 'pictures#black_and_white', as: :bw
+  post 'pictures/:id/edge', to: 'pictures#edge', as: :edge
+  post 'pictures/:id/sepia', to: 'pictures#sepia', as: :sepia
+  post 'pictures/:id/charcoal', to: 'pictures#charcoal', as: :charcoal
+  post 'pictures/:id/sketch', to: 'pictures#sketch', as: :sketch
+  post 'pictures/:id/vignette', to: 'pictures#vignette', as: :vignette
+  post 'pictures/:id/polaroid', to: 'pictures#polaroid', as: :polaroid
+  post 'pictures/:id/make_bigger', to: 'pictures#make_bigger', as: :make_bigger
+  post 'pictures/:id/make_smaller', to: 'pictures#make_smaller', as: :make_smaller
+  post 'pictures/:id/make_thumbnail', to: 'pictures#make_thumbnail', as: :make_thumbnail
+  post 'pictures/:id/flip_vertical', to: 'pictures#flip_vertical', as: :flip_vertical
+  post 'pictures/:id/flip_horizontal', to: 'pictures#flip_horizontal', as: :flip_horizontal
+
+
+
+
   resources :categories
   resources :tags
 
