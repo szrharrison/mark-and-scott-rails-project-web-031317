@@ -13,11 +13,11 @@ gem 'rmagick'
 gem 'rest_client'
 gem 'jquery-masonry-rails'
 gem 'figaro'
+gem 'faker'
 
 gem 'face_detect'
 gem 'googleauth'
 gem 'google-api-client'
-
 
 gem 'cloudinary'
 
