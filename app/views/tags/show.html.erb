@@ -1,0 +1,7 @@
+<h1><%= @tag.name %></h1>
+
+<div class="row grid">
+  <% @tag.pictures.each do |picture| %>
+      <%= render partial: "picture", locals: { picture: picture } %>
+  <% end %>
+</div>

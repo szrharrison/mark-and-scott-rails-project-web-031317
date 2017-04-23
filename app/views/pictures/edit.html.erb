@@ -43,5 +43,42 @@ $( document ).on('turbolinks:load', function() {
   <div class="col s6">
     <h5>Preview:</h5>
     <%= image_tag @picture.image.url %>
+    <%= form_tag bw_path(@picture)  do %>
+      <div><%= submit_tag("B&W", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag edge_path(@picture)  do %>
+      <div><%= submit_tag("Edge", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag sepia_path(@picture)  do %>
+      <div><%= submit_tag("Sepia", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag charcoal_path(@picture)  do %>
+      <div><%= submit_tag("Charcoal", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag sketch_path(@picture)  do %>
+      <div><%= submit_tag("Sketch", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag vignette_path(@picture)  do %>
+      <div><%= submit_tag("Vignette", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag polaroid_path(@picture)  do %>
+      <div><%= submit_tag("Polaroid", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag make_bigger_path(@picture)  do %>
+      <div><%= submit_tag("Double Size", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag make_smaller_path(@picture)  do %>
+      <div><%= submit_tag("Half Size", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag make_thumbnail_path(@picture)  do %>
+      <div><%= submit_tag("Thumbnail", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag flip_vertical_path(@picture)  do %>
+      <div><%= submit_tag("Flip Vertically", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+    <%= form_tag flip_horizontal_path(@picture)  do %>
+      <div><%= submit_tag("Flip Horizontally", class: "waves-effect waves-light btn" ) %></div>
+    <% end %>
+
   </div>
 </div>

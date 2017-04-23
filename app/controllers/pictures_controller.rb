@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  #changed this to skip before action because I'm adding a ton of new routes and don't want to have to type them out
+  before_action :set_picture, except: [:new, :create, :index]
   before_action :set_categories, only: [:new, :edit]
   before_action :restrict_to_users, except: [:index, :show]
 
@@ -36,6 +37,77 @@ class PicturesController < ApplicationController
     @picture.destroy
     redirect_to user_path( current_user ), notice: ["Successfully deleted #{@picture.name}"]
   end
+
+  def black_and_white
+    @picture = Picture.find(params[:id])
+    @picture.grey_scale_improved
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def edge
+    @picture.edge
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def sepia
+    @picture.sepia
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+  def charcoal
+    @picture.charcoal
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def sketch
+    @picture.sketch
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def vignette
+    @picture.vignette
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+  def polaroid
+    @picture.polaroid
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+  def make_bigger
+    @picture.make_bigger
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+  def make_smaller
+    @picture.make_smaller
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def make_thumbnail
+    @picture.make_thumbnail
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def flip_vertical
+    @picture.flip_vertical
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+  def flip_horizontal
+    @picture.flip_horizontal
+    @picture.save
+    redirect_to "/pictures/#{params[:id]}"
+  end
+
+
 
   private
 

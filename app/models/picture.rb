@@ -42,64 +42,95 @@ class Picture < ApplicationRecord
     #uses the quantize method to set the number of colors used in the image to 2
     image = image.quantize(nc=2)
     #this saves the file in the location it was before
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/grey-scale-\1\2'))
+    new_path = path.gsub(/\/original\/(.+\.)(...|....)/, '/original/grey-scale-\1\2')
+    image.write(new_path)
     #use this for testing, need to have X11 runnning for it to work
     #image.display
   end
 
-  def make_bigger
+  def destructive_greyscale
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.quantize(nc=2)
+    image.write(path)
+  end
 
+  def make_bigger
     path = self.image.path
     image = ImageList.new(path)
     image = image.magnify
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/bigger-\1\2'))
+    image.write(path)
   end
 
   def make_smaller
-
     path = self.image.path
     image = ImageList.new(path)
     image = image.minify
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/smaller-\1\2'))
+    image.write(path)
   end
 
-  def thumbnail
+  def make_thumbnail
     path = self.image.path
     image = ImageList.new(path)
-    image = image.thumbnail
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/thumbnail-\1\2'))
+    image = image.thumbnail(image.columns*0.09, image.rows*0.09)
+    image.write(path)
   end
 
   def flip_vertical
     path = self.image.path
     image = ImageList.new(path)
     image = image.flip
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/vertical-flip-\1\2'))
+    image.write(path)
   end
 
   def flip_horizontal
     path = self.image.path
     image = ImageList.new(path)
     image = image.flop
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/vertical-flip-\1\2'))
+    image.write(path)
   end
-
-
-
 
   def edge
-    #grabs path of image on our server
     path = self.image.path
-    #create a new "Image List" object from the image at the path
     image = ImageList.new(path)
-    #uses the quantize method to set the number of colors used in the image to 2
     image = image.edge
-    #this saves the file in the location it was before
-    image.write(path.gsub(/\/original\/(.+\.)(...|....)/, '/original/edge-detected-\1\2'))
-    #use this for testing, need to have X11 runnning for it to work
-    #image.display
+    image.write(path)
   end
 
+  def sepia
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.sepiatone
+    image.write(path)
+  end
+
+  def charcoal
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.charcoal
+    image.write(path)
+  end
+
+  def sketch
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.sketch
+    image.write(path)
+  end
+
+  def vignette
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.vignette
+    image.write(path)
+  end
+
+  def polaroid
+    path = self.image.path
+    image = ImageList.new(path)
+    image = image.vignette
+    image.write(path)
+  end
 
   def grey_scale_improved
     path = self.image.path
@@ -113,7 +144,8 @@ class Picture < ApplicationRecord
       pixel.blue = average
     end
     image.store_pixels(0,0, image.columns,image.rows, new_pixels)
-    image.display
+    image.write(path)
+
     #image.import_pixels(0,0,image.columns,image.rows,new_pixels, "RGB").display
   end
 

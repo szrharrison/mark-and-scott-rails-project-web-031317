@@ -24,7 +24,7 @@ class TagsController < ApplicationController
   end
 
   def index
-    @categories = Tag.all
+    @tags = Tag.all
   end
 
   private
