@@ -42,69 +42,69 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
     @picture.grey_scale_improved
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def edge
     @picture.edge
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def sepia
     @picture.sepia
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
   def charcoal
     @picture.charcoal
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def sketch
     @picture.sketch
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def vignette
     @picture.vignette
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
   def polaroid
     @picture.polaroid
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
   def make_bigger
     @picture.make_bigger
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
   def make_smaller
     @picture.make_smaller
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def make_thumbnail
     @picture.make_thumbnail
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def flip_vertical
     @picture.flip_vertical
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
   def flip_horizontal
     @picture.flip_horizontal
     @picture.save
-    redirect_to "/pictures/#{params[:id]}"
+    redirect_to "/pictures/#{params[:id]}/edit"
   end
 
 
