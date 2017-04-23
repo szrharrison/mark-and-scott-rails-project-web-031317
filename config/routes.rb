@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # Picture Categories
   post '/picture-categories', to: 'picture_categories#create', as: :create_picture_category
-  delete '/picture-categories/:id', to: 'picture_categories#destroy', as: :destroy_picture_category
+  delete 'pictures/:picture_id/picture-categories/:id', to: 'picture_categories#destroy', as: :destroy_picture_category
 
   # Picture Tags
   delete '/pictures/:picture_id/picture-tags/:id', to: 'picture_tags#destroy', as: :destroy_picture_tag

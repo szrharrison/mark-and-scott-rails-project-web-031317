@@ -1,23 +1,16 @@
+<script>
+$( document ).on('turbolinks:load', function() {
+  $('.slider').slider();
+});
+</script>
 <div class="slider">
     <ul class="slides">
       <% current_user.favorites.each do |favorite| %>
         <li>
-          <div class="card hoverable">
-            <div class="card-image">
-              <%= link_to "<img src='#{favorite.favorite_picture.image.url}'>".html_safe, favorite.favorite_picture %>
-
-              <%= link_to "<i class='material-icons red-text'>favorite_border</i>".html_safe, "/users/#{favorite.favorited_by.id}/favorites/#{favorite.id}", class: "btn-floating halfway-fab waves-effect waves-light white tooltipped", 'data-position': "bottom", 'data-delay': "50", 'data-tooltip': "Remove Favorite", method: "delete" %>
-            </div>
-            <div class="card-content">
-              <% favorite.favorite_picture.categories.each do |category| %>
-              <div class="chip">
-                <%= link_to category.name, category %>
-              </div>
-              <% end %>
-            </div>
-          </div>
+            <%= link_to "<img src='#{favorite.favorite_picture.image.url}'>".html_safe, favorite.favorite_picture %>
           <div class="caption center-align">
             <h3><%= favorite.favorite_picture.name %></h3>
+            <%= link_to "<i class='material-icons red-text'>favorite_border</i>".html_safe, "/users/#{favorite.favorited_by.id}/favorites/#{favorite.id}", class: "btn-floating waves-effect waves-light white tooltipped", 'data-position': "bottom", 'data-delay': "50", 'data-tooltip': "Remove Favorite", method: "delete" %>
           </div>
         </li>
       <% end %>
