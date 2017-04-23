@@ -2,7 +2,6 @@ class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :edit]
   before_action :restrict_to_users, except: [:index, :show]
-  before_action :following_picture_owner?, only: [:show]
 
   def new
     @picture = Picture.new
@@ -52,9 +51,5 @@ class PicturesController < ApplicationController
     params_hash = params.require( :picture ).permit( :image, :name )
     params_hash[:category_ids] = params.require( :picture ).require( :category_ids )
     params_hash
-  end
-
-  def following_picture_owner?
-    @following = current_user.leaders.include?( @picture.user )
   end
 end
