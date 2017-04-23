@@ -34,7 +34,7 @@ class PicturesController < ApplicationController
 
   def destroy
     @picture.destroy
-    redirect_to user_path( current_user ), notice: "Successfully deleted #{@picture.name}"
+    redirect_to user_path( current_user ), notice: ["Successfully deleted #{@picture.name}"]
   end
 
   private

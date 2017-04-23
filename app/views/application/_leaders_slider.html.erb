@@ -1,0 +1,17 @@
+<script>
+$( document ).on('turbolinks:load', function() {
+  $('.slider').slider();
+});
+</script>
+<div class="slider">
+  <ul class="slides">
+    <% leader.pictures.each do |picture| %>
+    <li>
+      <%= link_to "<img src='#{picture.image.url}'>".html_safe, picture %>
+      <div class="caption center-align">
+        <h3><%= picture.name %></h3>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

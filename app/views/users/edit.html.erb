@@ -1,5 +1,5 @@
-<% if !@user.errors.empty? %>
-  <% @user.errors.full_messages.each do |message| %>
+<% if flash[:notice].present? %>
+  <% flash[:notice].each do |message| %>
     <%= message %>
   <% end %>
 <% end %>

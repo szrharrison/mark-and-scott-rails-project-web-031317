@@ -1,40 +1,46 @@
-<h1>Hello, <%= @user.username %>!</h1>
-<% if flash.notice.present? %>
-<div class="row">
-    <div class="col s12 m5">
-      <div class="card-panel red">
-        <span class="white-text">
-          <%= flash.notice %>
-        </span>
+<% if @user == current_user %>
+  <h1>Hello, <%= @user.username %>!</h1>
+  <% if flash[:notice].present? %>
+    <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel red">
+          <% flash[:notice].each do |message| %>
+            <p class="white-text">
+              <%= message %>
+            </p>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
-<h3>Favorite Pictures:</h3>
-<div class="row grid">
-  <% @user.favorite_pictures.each do |picture| %>
-    <%= render partial: "picture", locals: { picture: picture } %>
   <% end %>
-</div>
-<h3>You are following:</h3>
-
-<% @user.leaders.sort_by { |leader| leader.username }.each do |leader| %>
-  <%= leader.username %>
-  <div class="row grid">
-    <% leader.pictures.each do |picture| %>
-      <%= render partial: "picture", locals: { picture: picture } %>
+<% end %>
+<% if @user == current_user %>
+  <% if @user.favorites.present? %>
+    <h3>Favorite Pictures:</h3>
+    <div class="row">
+        <%= render partial: "favorites_slider" %>
+    </div>
+  <% end %>
+  <h3>You are following:</h3>
+  <div class="row">
+    <% @user.leaders.sort_by { |leader| leader.username }.each do |leader| %>
+      <div class="col s12 m6">
+        <h4><%= link_to leader.username, leader %></h4>
+          <%= render partial: "leaders_slider", locals: { leader: leader } %>
+      </div>
     <% end %>
   </div>
 <% end %>
-
-<h3>Your Pictures:</h3>
+<h3><% if @user == current_user %>Your<% else %><%= @user.username %>'s<% end %> Pictures:</h3>
 <div class="row grid">
-  <% @user.pictures.sort_by { |picture| picture.favorited_by_ids.count }.each do |picture| %>
+  <% @user.pictures.sort_by { |picture| picture.favorited_by.count }.reverse.each do |picture| %>
     <%= render partial: "picture", locals: { picture: picture } %>
   <% end %>
 </div>
-<div class="row">
-  <div class="col s12">
-    <%= link_to "Add a picture", new_picture_path, class: "btn waves-effect waves-light" %>
+<% if @user == current_user %>
+  <div class="row">
+    <div class="col s12">
+      <%= link_to "Add a picture", new_picture_path, class: "btn waves-effect waves-light" %>
+    </div>
   </div>
-</div>
+<% end %>

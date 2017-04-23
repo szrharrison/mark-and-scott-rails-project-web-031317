@@ -1,38 +1,40 @@
-<h3><%= @picture.name %></h3>
-<%= image_tag @picture.image.url %>
-<% if logged_in? && session[:user_id] != @picture.user.id && !following_picture_owner? %>
-  <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
-<% end %>
-<h5>Categories</h5>
-<ul>
-  <% @picture.categories.each do |category| %>
-    <li>
-      <%= link_to category.name, category %>
-
-      <% if logged_in? && user_authorized? %>
-        <%= form_tag "/picture-categories/#{PictureCategory.find_by( picture_id: @picture.id, category_id: category.id).id}", method: "delete" do %>
-          <%= hidden_field_tag :picture_id, @picture.id %>
-          <%= hidden_field_tag :category_id, category.id %>
-          <%= submit_tag "X", class: "btn waves-effect waves-light" %>
-        <% end %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
-
-<h5>Tags</h5>
-<ul>
-  <% @picture.picture_tags.each do |tag| %>
-    <li>
+<div class="row picture-title valign-wrapper">
+  <div class="col s4 m6">
+    <h3><%= @picture.name %></h3>
+  </div>
+  <div class="col s8 m6 valign-wrapper">
+    <h4>Uploaded by <%= link_to "#{@picture.user.username}", @picture.user %></h4>
+    <% if logged_in? && !user_authorized? && !following_picture_owner? %>
+      <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
+    <% end %>
+  </div>
+</div>
+<div class="card">
+  <div class="card-image">
+    <%= image_tag @picture.image.url %>
+  </div>
+  <div class="card-content">
+    <h5>Categories:</h5>
+    <% @picture.picture_categories.each do |pic_category| %>
       <div class="chip">
-        <%= link_to tag.tag.name, tag.tag %>
+        <%= link_to pic_category.category.name, pic_category.category %>
+
         <% if logged_in? && user_authorized? %>
-          <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-tags/#{tag.id}", method: "delete" %>
+          <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-categories/#{pic_category.id}", method: "delete"%>
         <% end %>
       </div>
-    </li>
+    <% end %>
+  </div>
+</div>
+<h5>Tags</h5>
+  <% @picture.picture_tags.each do |pic_tag| %>
+    <div class='chip'>
+      <%= link_to pic_tag.tag.name, pic_tag.tag %>
+      <% if logged_in? && user_authorized? %>
+        <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-tags/#{pic_tag.id}", method: "delete" %>
+      <% end %>
+    </div>
   <% end %>
-</ul>
 <% if logged_in? && user_authorized? %>
   <p><%= link_to "Edit Image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %>
   <%= link_to "Delete Image", "/pictures/#{@picture.id}", class: "btn waves-effect waves-light", method: "delete" %></p>
