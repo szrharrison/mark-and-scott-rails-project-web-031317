@@ -18,7 +18,7 @@ gem 'face_detect'
 gem 'googleauth'
 gem 'google-api-client'
 
-
+gem 'aws-sdk'
 gem 'cloudinary'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
