@@ -13,7 +13,7 @@
   </div>
 <% end %>
 <div class="row grid">
-  <% @pictures.sort_by { |picture| picture.favorited_by.count }.each do |picture| %>
+  <% @pictures.sort_by { |picture| picture.favorited_by.count }.reverse.each do |picture| %>
     <% if !logged_in? || picture.user_id != current_user.id %>
       <%= render partial: "picture", locals: { picture: picture } %>
     <% end %>

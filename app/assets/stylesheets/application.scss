@@ -23,31 +23,35 @@ $background-color: #556270;
   @include transition( 0.3s );
 }
 nav {
+  @extend .blue-grey, .darken-2 ;
   @include transition( 0.3s );
-  background-color: $background-color;
   text-align: center;
   .row {
     margin-bottom: 0;
   }
   .left-bar {
+    @include transition( 0.3s );
     border-left: 1px solid #5788bc;
+  }
+  .left-bar.col {
+    padding: 0;
   }
   a {
     @include transition( 0.3s );
     text-align: center;
   }
   a:hover {
-    color: $highlight-text-color;
+    @extend .lime-text, .text-accent-3 ;
   }
   form {
     .input-field {
       label:not(.label-icon).active {
+        @extend .lime-text, .text-accent-3 ;
         -webkit-transform: translateY(25%) translateX(25%);
         transform: translateY(25%) translateX(25%);
-        color: $highlight-text-color;
         margin-right: 10px;
       }
-      .prefix.active { color: $highlight-text-color;}
+      .prefix.active { @extend .lime-text, .text-accent-3 ;}
     }
     button {
       margin-left: 10px
@@ -55,7 +59,7 @@ nav {
   }
 }
 .btn:hover {
-  color: $highlight-text-color;
+  @extend .lime-text, .text-accent-3 ;
 }
 .hidden {
   display: none;
@@ -65,17 +69,29 @@ nav {
   width: 100%;
 }
 .card .card-content {
-  background-color: $background-color;
+  @extend .blue-grey, .darken-2 ;
   color: #fff;
 }
 .chip {
+  cursor: pointer;
   @include transition( 0.3s );
   background-color: #26a69a;
   a {
+    @include transition( 0.3s );
     color: #fff;
   }
 }
 .chip:hover {
+  a {
+    @extend .lime-text, .text-accent-3 ;
+  }
   background-color: #2bbbad;
-  color: $highlight-text-color;
 }
+.slider .caption {
+  h3 {display: inline-block; background-color: rgba(0,0,0,0.4); padding: 3px 20px;}
+  a {display: block; margin: auto;}
+}
+.picture-title h4 {display:inline-block; margin-right:20px}
+a i.pre-word {display: inline-block;}
+a .post-pre-word {margin-left: 5px;}
+.container {margin-bottom: 50px;}

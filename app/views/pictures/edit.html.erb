@@ -1,3 +1,10 @@
+<script>
+$( document ).on('turbolinks:load', function() {
+  if ($(':selected')) {
+    $('label[for="picture_category_ids"]').addClass('active');
+  }
+});
+</script>
 <% if flash[:notice].present? %>
   <% flash[:notice].each do |message| %>
     <%= message %>

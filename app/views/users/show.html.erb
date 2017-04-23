@@ -18,23 +18,22 @@
   <% if @user.favorites.present? %>
     <h3>Favorite Pictures:</h3>
     <div class="row">
-        <%= render partial: "slider" %>
+        <%= render partial: "favorites_slider" %>
     </div>
   <% end %>
   <h3>You are following:</h3>
-
-  <% @user.leaders.sort_by { |leader| leader.username }.each do |leader| %>
-    <h4><%= link_to leader.username, leader %></h4>
-    <div class="row grid">
-      <% leader.pictures.each do |picture| %>
-        <%= render partial: "picture", locals: { picture: picture } %>
-      <% end %>
-    </div>
-  <% end %>
+  <div class="row">
+    <% @user.leaders.sort_by { |leader| leader.username }.each do |leader| %>
+      <div class="col s12 m6">
+        <h4><%= link_to leader.username, leader %></h4>
+          <%= render partial: "leaders_slider", locals: { leader: leader } %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
 <h3><% if @user == current_user %>Your<% else %><%= @user.username %>'s<% end %> Pictures:</h3>
 <div class="row grid">
-  <% @user.pictures.sort_by { |picture| picture.favorited_by.count }.each do |picture| %>
+  <% @user.pictures.sort_by { |picture| picture.favorited_by.count }.reverse.each do |picture| %>
     <%= render partial: "picture", locals: { picture: picture } %>
   <% end %>
 </div>

@@ -1,4 +1,14 @@
-<h3><%= @picture.name %></h3>
+<div class="row picture-title valign-wrapper">
+  <div class="col s4 m6">
+    <h3><%= @picture.name %></h3>
+  </div>
+  <div class="col s8 m6 valign-wrapper">
+    <h4>Uploaded by <%= link_to "#{@picture.user.username}", @picture.user %></h4>
+    <% if logged_in? && !user_authorized? && !following_picture_owner? %>
+      <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
+    <% end %>
+  </div>
+</div>
 <div class="card">
   <div class="card-image">
     <%= image_tag @picture.image.url %>
@@ -16,22 +26,15 @@
     <% end %>
   </div>
 </div>
-<% if logged_in? && session[:user_id] != @picture.user.id && !following_picture_owner? %>
-  <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
-<% end %>
 <h5>Tags</h5>
-<ul>
-  <% @picture.picture_tags.each do |tag| %>
-    <li>
-      <div class="chip">
-        <%= link_to tag.tag.name, tag.tag %>
-        <% if logged_in? && user_authorized? %>
-          <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-tags/#{tag.id}", method: "delete" %>
-        <% end %>
-      </div>
-    </li>
+  <% @picture.picture_tags.each do |pic_tag| %>
+    <div class='chip'>
+      <%= link_to pic_tag.tag.name, pic_tag.tag %>
+      <% if logged_in? && user_authorized? %>
+        <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-tags/#{pic_tag.id}", method: "delete" %>
+      <% end %>
+    </div>
   <% end %>
-</ul>
 <% if logged_in? && user_authorized? %>
   <p><%= link_to "Edit Image", edit_picture_path( @picture ), class: "btn waves-effect waves-light" %>
   <%= link_to "Delete Image", "/pictures/#{@picture.id}", class: "btn waves-effect waves-light", method: "delete" %></p>

@@ -1,10 +1,35 @@
+<script>
+$( document ).on('turbolinks:load', function() {
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#preview').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  $("#picture_image").change(function(){
+      readURL(this);
+      $('#preview').removeClass('hidden');
+  });
+
+  if ($(':selected')) {
+    $('label[for="picture_category_ids"]').addClass('active');
+  }
+
+});
+</script>
 <% if flash[:notice].present? %>
   <% flash[:notice].each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
 <div class="row">
-  <div class="col s6">
+  <div class="col s12 m6">
     <%= form_for @picture do |f| %>
     <div class="input-field">
       <%= f.label :name %>
@@ -23,7 +48,7 @@
     <div class="input-field">
       <%= f.label :category_ids, "Categories" %>
       <select name="picture[category_ids][]" multiple>
-        <option value="" disabled selected>Select at least one category</option>
+        <option value="" disabled selected>Choose at least one Category</option>
         <% @categories.each do |category| %>
           <option value="<%= category.id %>"><%= category.name %></option>
         <% end %>
@@ -31,5 +56,8 @@
     </div>
     <%= f.submit class: "btn waves-effect waves-light" %>
     <% end %>
+  </div>
+  <div class="col s12 m6">
+    <img id="preview" src="#" alt="Image Preview" class="hidden">
   </div>
 </div>

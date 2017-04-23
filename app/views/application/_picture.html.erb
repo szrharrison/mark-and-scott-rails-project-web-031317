@@ -19,8 +19,8 @@ $( document ).on('turbolinks:load', function() {
             <%= link_to "<i class='material-icons'>favorite</i>".html_safe, "/users/#{current_user.id}/favorites/#{picture.id}", class: "btn-floating halfway-fab waves-effect waves-light red tooltipped", 'data-position': "bottom", 'data-delay': "50", 'data-tooltip': "Add Favorite", method: "post" %>
           <% end %>
         <% else %>
-          <p class="btn-floating halfway-fab waves-effect waves-light red center-align">
-            <%= picture.favorited_by.count %>
+          <p class="btn-floating halfway-fab red center-align">
+            +<%= picture.favorited_by.count %>
           </p>
         <% end %>
       </div>
