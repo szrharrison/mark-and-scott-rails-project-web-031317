@@ -1,25 +1,24 @@
 <h3><%= @picture.name %></h3>
-<%= image_tag @picture.image.url %>
+<div class="card">
+  <div class="card-image">
+    <%= image_tag @picture.image.url %>
+  </div>
+  <div class="card-content">
+    <h5>Categories:</h5>
+    <% @picture.picture_categories.each do |pic_category| %>
+      <div class="chip">
+        <%= link_to pic_category.category.name, pic_category.category %>
+
+        <% if logged_in? && user_authorized? %>
+          <%= link_to "<i class='close material-icons'></i>".html_safe, "/pictures/#{@picture.id}/picture-categories/#{pic_category.id}", method: "delete"%>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
 <% if logged_in? && session[:user_id] != @picture.user.id && !following_picture_owner? %>
   <%= link_to "Follow #{@picture.user.username}", "/user-leaders/#{@picture.user.id}", class: "btn waves-effect waves-light", method: "post" %>
 <% end %>
-<h5>Categories</h5>
-<ul>
-  <% @picture.categories.each do |category| %>
-    <li>
-      <%= link_to category.name, category %>
-
-      <% if logged_in? && user_authorized? %>
-        <%= form_tag "/picture-categories/#{PictureCategory.find_by( picture_id: @picture.id, category_id: category.id).id}", method: "delete" do %>
-          <%= hidden_field_tag :picture_id, @picture.id %>
-          <%= hidden_field_tag :category_id, category.id %>
-          <%= submit_tag "X", class: "btn waves-effect waves-light" %>
-        <% end %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
-
 <h5>Tags</h5>
 <ul>
   <% @picture.picture_tags.each do |tag| %>

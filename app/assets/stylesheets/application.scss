@@ -62,4 +62,20 @@ nav {
 }
 .card-image .card-title {
   background-color: rgba(0,0,0,0.4);
+  width: 100%;
+}
+.card .card-content {
+  background-color: $background-color;
+  color: #fff;
+}
+.chip {
+  @include transition( 0.3s );
+  background-color: #26a69a;
+  a {
+    color: #fff;
+  }
+}
+.chip:hover {
+  background-color: #2bbbad;
+  color: $highlight-text-color;
 }
