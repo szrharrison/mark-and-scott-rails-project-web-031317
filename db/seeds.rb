@@ -10,3 +10,10 @@ categories = %w(Nature People Abstract Animals Art/Architecture Illustrations/Cl
 categories.each do |category_name|
   Category.find_or_create_by( name: category_name )
 end
+
+new_users = []
+15.times do
+  user = User.new( username: Faker::Internet.unique.user_name, password: 'asdf' )
+  user.save
+  new_users << user
+end

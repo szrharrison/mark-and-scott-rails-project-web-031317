@@ -3,6 +3,7 @@ $( document ).on('turbolinks:load', function() {
   if ($(':selected')) {
     $('label[for="picture_category_ids"]').addClass('active');
   }
+  $('.collapsible').collapsible();
 });
 </script>
 <% if flash[:notice].present? %>
@@ -10,6 +11,43 @@ $( document ).on('turbolinks:load', function() {
     <%= message %>
   <% end %>
 <% end %>
+
+<div class="row">
+  <div class="col s12">
+    <h5>Preview:</h5>
+    <%= image_tag @picture.image.url %>
+    <ul class="collapsible popout" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header">Picture Effects</div>
+        <div class="collapsible-body">
+          <ul class="collection">
+            <li><%= link_to "B&W", bw_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Edge", edge_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Sepia", sepia_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Charcoal", charcoal_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Sketch", sketch_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Vignette", vignette_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Polaroid", polaroid_path(@picture), method: 'post' %></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">Formatting</div>
+        <div class="collapsible-body">
+          <ul class="collection">
+            <li><%= link_to "Double Size", make_bigger_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Half Size", make_smaller_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Thumbnail", make_thumbnail_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Flip Vertically", flip_vertical_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Flip Horizontally", flip_horizontal_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Vignette", vignette_path(@picture), method: 'post' %></li>
+            <li><%= link_to "Polaroid", polaroid_path(@picture), method: 'post' %></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <div class="row">
   <div class="col s6">
@@ -39,46 +77,5 @@ $( document ).on('turbolinks:load', function() {
     </div>
     <%= f.submit class: "btn waves-effect waves-light" %>
     <% end %>
-  </div>
-  <div class="col s6">
-    <h5>Preview:</h5>
-    <%= image_tag @picture.image.url %>
-    <%= form_tag bw_path(@picture)  do %>
-      <div><%= submit_tag("B&W", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag edge_path(@picture)  do %>
-      <div><%= submit_tag("Edge", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag sepia_path(@picture)  do %>
-      <div><%= submit_tag("Sepia", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag charcoal_path(@picture)  do %>
-      <div><%= submit_tag("Charcoal", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag sketch_path(@picture)  do %>
-      <div><%= submit_tag("Sketch", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag vignette_path(@picture)  do %>
-      <div><%= submit_tag("Vignette", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag polaroid_path(@picture)  do %>
-      <div><%= submit_tag("Polaroid", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag make_bigger_path(@picture)  do %>
-      <div><%= submit_tag("Double Size", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag make_smaller_path(@picture)  do %>
-      <div><%= submit_tag("Half Size", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag make_thumbnail_path(@picture)  do %>
-      <div><%= submit_tag("Thumbnail", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag flip_vertical_path(@picture)  do %>
-      <div><%= submit_tag("Flip Vertically", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-    <%= form_tag flip_horizontal_path(@picture)  do %>
-      <div><%= submit_tag("Flip Horizontally", class: "waves-effect waves-light btn" ) %></div>
-    <% end %>
-
   </div>
 </div>
