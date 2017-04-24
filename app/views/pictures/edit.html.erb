@@ -16,7 +16,7 @@ $( document ).on('turbolinks:load', function() {
   <div class="col s12">
     <h5>Preview:</h5>
     <%= image_tag @picture.image.url %>
-    <ul class="collapsible popout" data-collapsible="expandable">
+    <ul class="collapsible" data-collapsible="expandable">
       <li>
         <div class="collapsible-header">Picture Effects</div>
         <div class="collapsible-body">
@@ -40,8 +40,6 @@ $( document ).on('turbolinks:load', function() {
             <li><%= link_to "Thumbnail", make_thumbnail_path(@picture), method: 'post' %></li>
             <li><%= link_to "Flip Vertically", flip_vertical_path(@picture), method: 'post' %></li>
             <li><%= link_to "Flip Horizontally", flip_horizontal_path(@picture), method: 'post' %></li>
-            <li><%= link_to "Vignette", vignette_path(@picture), method: 'post' %></li>
-            <li><%= link_to "Polaroid", polaroid_path(@picture), method: 'post' %></li>
           </ul>
         </div>
       </li>
