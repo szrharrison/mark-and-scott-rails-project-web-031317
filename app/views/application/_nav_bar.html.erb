@@ -11,7 +11,7 @@
                 <%= link_to "<i class='material-icons pre-word'>face</i><span class='post-pre-word'>View your pics</span>".html_safe, current_user, class: "valign-wrapper" %>
               </li>
               <li class="left-bar">
-                <%= link_to "<i class='material-icons pre-word'>add_circle_outline</i><span class='post-pre-word'>Add a Picture</span>".html_safe, new_picture_path, class: "valign-wrapper" %>
+                <%= link_to "<i class='material-icons pre-word'>add_a_photo</i><span class='post-pre-word'>Add a Picture</span>".html_safe, new_picture_path, class: "valign-wrapper" %>
               </li>
               <li class="left-bar">
                 <%= link_to "Logout", "/sessions/#{current_user.id}", method: 'delete' %>
